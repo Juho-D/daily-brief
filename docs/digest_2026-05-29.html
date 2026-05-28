@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Packaging & SI/PI Daily Brief · 2026-05-29</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief</div>
+        <h1>晨间简报 · 2026-05-29</h1>
+        <div class="meta">6 条精选 · 5 个方向 · 文字版 · 含可信度判断</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日头条 · 先看这三条</h2>
+        <div class="item-card">
+          <div class="item-label">Strategic Framework · A 级</div>
+          <h3 class="item-title">Huawei τ Scaling Law：从 geometry scaling 转向 system time constant</h3>
+          <div class="source">Huawei / ChinaXiv / SCMP · 2026-05-25 · <a href="https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">Advanced Packaging · A 级</div>
+          <h3 class="item-title">ECTC 2026：hybrid bonding、CPO、CoWoS reliability 成为核心议题</h3>
+          <div class="source">Advanced Packaging News · 2026-05-26 · <a href="https://advancedpackaging.news/article/124287/ECTC_2026_spotlights_advanced_packaging">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">HBM / Thermal · A 级</div>
+          <h3 class="item-title">SK hynix iHBM：HBM package 内部散热路径进入架构设计</h3>
+          <div class="source">SK hynix Newsroom · 2026-05-26 · <a href="https://news.skhynix.co.kr/ihbm-solution/">打开原文</a></div>
+        </div>
+      </section>
+
+      <section class="block green">
+        <h3>一句话讲清楚今天在说啥</h3>
+        <p>今天的主线不是单个 chip 或单个 package，而是 <strong>system-level scaling</strong>。先进封装、CPO、UCIe、HBM、SI/PI 正在变成同一个工程问题：怎样把 data movement、latency、thermal、PDN 和 testability 一起压下去。</p>
+      </section>
+
+      <h2 class="section-title">今日重点判断 <span>· 给你直接结论</span></h2>
+      <section class="panel">
+        <ol class="brief-list">
+          <li><strong>τ Scaling Law 值得推送，但要带拆解。</strong>它的方向是真问题，命名有战略叙事，关键看 Kirin 2026 / Ascend 后续 PPA、良率、成本能不能被验证。</li>
+          <li><strong>2.5D/3D 的重点正在从“堆起来”变成“稳量产”。</strong>hybrid bonding pitch、overlay、warpage、thermal path、electromigration、CoWoS board-level reliability 都会影响可制造性。</li>
+          <li><strong>SI/PI 会更早进入架构阶段。</strong>UCIe、SerDes、LPDDR、CPO 都会迫使 package routing、PDN、return path、jitter、eye margin 和 test correlation 前移。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">详细讲给你听 <span>· 母稿完整版</span></h2>
+
+      <section class="block blue">
+        <h3>01｜A 级｜Huawei τ Scaling Law / LogicFolding</h3>
+        <p><strong>事实：</strong>华为在 IEEE ISCAS 2026 提出 τ Scaling Law，把 scaling 的优化目标从几何尺寸继续缩小，转向降低系统特征时间常数，配套 LogicFolding、Unified Bus、Hi-ONE optical I/O、3D Folding 等路径。</p>
+        <p><strong>技术影响：</strong>这会把 3D integration、optical I/O、interconnect latency、PDN、thermal、SI/PI 和 EDA timing closure 放到同一个指标体系里。它不是单纯封装新闻，而是先进制程受限后的一套 system scaling 框架。</p>
+        <p><strong>评级依据：</strong>A 级。主题高度命中 advanced packaging 与 SI/PI，来源包含官方发布、论文和主流媒体分析；但“law”还缺少长期产业数据和第三方量产验证，所以不到 S 级。</p>
+        <p><strong>可信度/待验证：</strong>方向可信，指标 claim 需要看 Kirin 2026 的 die shot、功耗、频率、面积、良率、成本，以及 Ascend / data center 场景是否能复现。</p>
+        <p><strong>对你有什么用：</strong>这类信息应该作为“框架类高优先级”推送，因为它提示你未来看先进封装不能只看 bump pitch，还要看 package architecture、SI/PI、thermal 和 test 的闭环能力。</p>
+        <p>来源：<a href="https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling">Huawei</a> · <a href="https://chinarxiv.org/items/chinaxiv-202605.00224">ChinaXiv</a> · <a href="https://www.scmp.com/tech/article/3354912/huaweis-new-chip-scaling-law-aims-sidestep-asml-chokepoint-hurdles-remain-analysts">SCMP</a></p>
+      </section>
+
+      <section class="block pink">
+        <h3>02｜A 级｜ECTC 2026: hybrid bonding / CPO / CoWoS reliability</h3>
+        <p><strong>事实：</strong>ECTC 2026 议题覆盖 450nm pitch copper hybrid bonding、die-to-wafer overlay、indium micro-bumps、CPO、CoWoS board-level reliability 等先进封装关键方向。</p>
+        <p><strong>技术影响：</strong>2.5D/3D packaging 的主战场正在从“更密互连”转向“可制造、可测试、可散热、可长期可靠”。这对材料、设备、EDA、OSAT、测试方法都会有牵引。</p>
+        <p><strong>评级依据：</strong>A 级。专业会议 + 多个关键封装方向聚合 + 与量产可靠性强相关，值得作为每日重点。</p>
+        <p><strong>可信度/待验证：</strong>会议议题可信，后续需要看论文细节是否给出可复现的工艺窗口、可靠性数据、failure mode 和 test vehicle。</p>
+        <p><strong>对你有什么用：</strong>跟踪 ECTC 可以提前看到量产瓶颈在哪里，尤其是 hybrid bonding、CoWoS reliability、CPO attach 和 package-level thermal 的真实限制。</p>
+        <p>来源：<a href="https://advancedpackaging.news/article/124287/ECTC_2026_spotlights_advanced_packaging">Advanced Packaging News · 2026-05-26</a></p>
+      </section>
+
+      <section class="block orange">
+        <h3>03｜A 级｜SK hynix iHBM Integrated Cooling Elements</h3>
+        <p><strong>事实：</strong>SK hynix 披露 iHBM thermal architecture，在 HBM package 的 D2D PHY 区域加入 Integrated Cooling Elements，目标是降低 package internal thermal resistance。</p>
+        <p><strong>技术影响：</strong>HBM scaling 的瓶颈已经不只是 bandwidth，也包括 D2D PHY 附近的局部热阻、power delivery、信号裕量和热-电耦合。下一代 HBM5 很可能更依赖 package-internal thermal design。</p>
+        <p><strong>评级依据：</strong>A 级。HBM 是 AI accelerator package 的核心链路，散热改动会直接影响系统功耗、频率和可靠性。</p>
+        <p><strong>可信度/待验证：</strong>技术方向可信，需等待客户验证、量产封装剖面、热阻下降数据和实际系统功耗表现。</p>
+        <p><strong>对你有什么用：</strong>它提醒你看 HBM 不应只看容量和 pin speed，还要看 package thermal path、D2D PHY 位置、电源完整性和封装可靠性。</p>
+        <p>来源：<a href="https://news.skhynix.co.kr/ihbm-solution/">SK hynix Newsroom · 2026-05-26</a></p>
+      </section>
+
+      <section class="block purple">
+        <h3>04｜A 级｜GlobalFoundries SCALE CPO platform</h3>
+        <p><strong>事实：</strong>GlobalFoundries 发布 SCALE optical module solution，面向 AI data center 的 co-packaged optics，支持 CWDM / DWDM、TSV high-speed signaling / power delivery，以及 2.5D/3D stacking。</p>
+        <p><strong>技术影响：</strong>CPO 平台化后，真正难点会落到 optical-electrical co-design、fiber attach、known-good-die testability、thermal isolation 和 package power delivery。</p>
+        <p><strong>评级依据：</strong>A 级。CPO 是高速互连从 copper 向 optical 迁移的关键路线，虽然不是过去 24 小时新闻，但本月仍有持续参考价值。</p>
+        <p><strong>可信度/待验证：</strong>平台发布可信，需跟踪客户采用、量产节奏、插损/功耗数据、可维修性和封装良率。</p>
+        <p><strong>对你有什么用：</strong>CPO 会让 SI/PI、optical alignment、package substrate、thermal 和 test 全部耦合，适合作为长期主题跟踪。</p>
+        <p>来源：<a href="https://www.globenewswire.com/news-release/2026/05/04/3286711/0/en/GlobalFoundries-accelerates-adoption-of-co-packaged-optics-for-advanced-AI-data-centers-with-SCALE-optical-module-solution.html">GlobalFoundries / GlobeNewswire · 2026-05-04</a></p>
+      </section>
+
+      <section class="block blue">
+        <h3>05｜B+ 级｜Sarcina UCIe 2.0 packaging IP</h3>
+        <p><strong>事实：</strong>Sarcina 发布面向 32 GT/s chiplet interconnect 的 UCIe 2.0 packaging IP，覆盖 die-edge beachfront、RDL routing、package-level D2D、SI/PI 和 manufacturability。</p>
+        <p><strong>技术影响：</strong>UCIe 落地不只看 PHY spec，还看 package routing、PDN、return path、eye margin、jitter 和 silicon qualification。封装 IP 会把 SI/PI 从后期 debug 前移到架构定义。</p>
+        <p><strong>评级依据：</strong>B+ 级。方向非常相关，但属于单个 IP / service 发布，影响面低于标准发布或头部平台级更新。</p>
+        <p><strong>可信度/待验证：</strong>需要看是否有公开 silicon qualification、客户 tape-out、package test vehicle 和互操作结果。</p>
+        <p><strong>对你有什么用：</strong>它是观察 UCIe 从标准走向工程落地的窗口，尤其适合关注 SI/PI 仿测结合的人。</p>
+        <p>来源：<a href="https://thedatacenterengineer.com/news/sarcina-launches-ucie-2-0-packaging-ip-for-32-gt-s-chiplet-interconnects/">The Data Center Engineer · 2026-05-22</a></p>
+      </section>
+
+      <section class="block green">
+        <h3>06｜B 级｜TetraMem 22nm RRAM analog IMC SoC</h3>
+        <p><strong>事实：</strong>TetraMem 披露 22nm multi-level RRAM analog in-memory computing SoC 初步 silicon validation，用 RRAM arrays 和 mixed-signal compute engines 减少 data movement。</p>
+        <p><strong>技术影响：</strong>存算一体和先进封装的共同目标都是降低数据搬运。虽然这条更偏器件和架构，但它和 chiplet / HBM / optical I/O 的系统问题指向一致。</p>
+        <p><strong>评级依据：</strong>B 级。命中 compute-in-memory，但与 advanced packaging 和 SI/PI 的直接耦合弱于前几条。</p>
+        <p><strong>可信度/待验证：</strong>需跟踪真实 workload、精度、耐久性、温漂、良率和量产可行性。</p>
+        <p><strong>对你有什么用：</strong>适合作为 emerging topic 保持视野，但不应盖过 HBM、CPO、UCIe、2.5D/3D 这些主线。</p>
+        <p>来源：<a href="https://markets.chroniclejournal.com/chroniclejournal/article/bizwire-2026-5-16-tetramem-announces-22nm-multi-level-rram-analog-in-memory-computing-soc-milestone">Business Wire / TetraMem · 2026-05-16</a></p>
+      </section>
+
+      <section class="block pink">
+        <h3>关键术语小词典</h3>
+        <ul class="brief-list">
+          <li><strong>τ / time constant：</strong>这里可理解为系统完成关键数据移动或响应的时间代价。</li>
+          <li><strong>LogicFolding：</strong>通过 3D integration 和系统互连优化，把逻辑单元重新组织以降低延迟和数据搬运。</li>
+          <li><strong>Hybrid bonding：</strong>更细 pitch、更高密度 die-to-die / wafer-to-wafer 互连的关键工艺。</li>
+          <li><strong>PDN：</strong>Power Delivery Network，决定高速芯片和封装的电源完整性。</li>
+          <li><strong>Simulation-test correlation：</strong>把仿真结果和实测数据闭环校准，避免 package / board 级问题只在后期暴露。</li>
+        </ul>
+      </section>
+
+      <section class="block orange">
+        <h3>对你有什么用</h3>
+        <p>今天这组信息的共同价值是帮你建立判断框架：先进封装不再只是“谁能做更先进的封装形式”，而是谁能把架构、封装、SI/PI、thermal、test、EDA 和供应链一起闭环。明天的晨报应该保持这个标准：既报新闻，也要判断它为什么重要。</p>
+      </section>
+
+      <section class="block purple">
+        <h3>想深入可以搜</h3>
+        <p>Huawei τ Scaling Law、LogicFolding、Hi-ONE optical I/O、hybrid bonding pitch、CoWoS reliability、HBM thermal resistance、UCIe package-level SI/PI、CPO known-good-die testability、simulation-test correlation。</p>
+      </section>
+
+      <h2 class="section-title">来源与发布日期</h2>
+      <section class="panel">
+        <ul class="brief-list">
+          <li>Huawei · 2026-05-25 · τ Scaling Law official announcement</li>
+          <li>ChinaXiv · 2026-05 · A Time Scaling Theory for Multi-Layer Electronic Systems</li>
+          <li>SCMP · 2026-05 · Huawei scaling law analysis</li>
+          <li>Advanced Packaging News · 2026-05-26 · ECTC 2026 advanced packaging topics</li>
+          <li>SK hynix Newsroom · 2026-05-26 · iHBM solution</li>
+          <li>GlobalFoundries / GlobeNewswire · 2026-05-04 · SCALE CPO platform</li>
+          <li>The Data Center Engineer · 2026-05-22 · Sarcina UCIe 2.0 packaging IP</li>
+          <li>Business Wire / TetraMem · 2026-05-16 · Analog in-memory computing milestone</li>
+        </ul>
+      </section>
+
+      <div class="footer">Generated for Daily Brief · Advanced Packaging & SI/PI</div>
+    </main>
+  </body>
+</html>
