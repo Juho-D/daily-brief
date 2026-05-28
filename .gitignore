@@ -1,5 +1,6 @@
 .obsidian/
 .trash/
 node_modules/
+sent/
 .DS_Store
 Thumbs.db
