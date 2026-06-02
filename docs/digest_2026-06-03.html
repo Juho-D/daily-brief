@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Packaging & SI/PI Daily Brief · 2026-06-03</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief</div>
+        <h1>晨间简报 · 2026-06-03</h1>
+        <div class="meta">7 条精选 · 5 个方向 · 文字版 · 含可信度判断</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日头条 · 先看这三条</h2>
+        <div class="item-card">
+          <div class="item-label">HBM / Advanced Packaging · A 级</div>
+          <h3 class="item-title">Samsung HBM4E samples：12-layer HBM4E 把 HBM 竞争推进到 base die、thermal 与客户 qualification</h3>
+          <div class="source">Samsung Semiconductor · 2026-05-29 · <a href="https://semiconductor.samsung.com/news-events/news/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples/">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">CPO / Photonics · A 级</div>
+          <h3 class="item-title">Flexcompute autonomous photonic design：CPO 设计瓶颈开始指向 AI agent + simulation loop</h3>
+          <div class="source">PR Newswire / Flexcompute · 2026-06-02 · <a href="https://www.prnewswire.com/news-releases/flexcompute-pioneers-agent-driven-loop-for-autonomous-photonic-design-302787556.html">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">Hybrid Bonding · S 级</div>
+          <h3 class="item-title">imec / EVG 200 nm W2W hybrid bonding：先进封装互连 pitch 进入前道级工艺纪律区间</h3>
+          <div class="source">imec · 2026-05-28 · <a href="https://www.imec-int.com/en/press/imec-and-ev-group-demonstrate-wafer-wafer-hybrid-bonding-200nm-interconnect-pitch-and-record">打开原文</a></div>
+        </div>
+      </section>
+
+      <section class="block green">
+        <h3>一句话讲清楚今天在说啥</h3>
+        <p>今天的主线是：AI hardware scaling 的瓶颈继续从单一 compute die 扩散到 <strong>HBM stack、base die、hybrid bonding、CPO design automation、compliance test 和 3D-IC signoff</strong>。判断一条新闻是否重要，要看它有没有可验证指标、能不能牵引封装/SI/PI/thermal/test 的共同闭环。</p>
+      </section>
+
+      <h2 class="section-title">今日重点判断 <span>· 给你直接结论</span></h2>
+      <section class="panel">
+        <ol class="brief-list">
+          <li><strong>HBM4E 的竞争不只是带宽。</strong>Samsung 的 12-layer HBM4E samples 把 1c DRAM、4nm logic base die、thermal performance、customer qualification 和 advanced packaging portfolio 拉到一起，真正的验证点是客户系统里的功耗、热、良率和供货稳定性。</li>
+          <li><strong>CPO 要从器件 demo 走向设计闭环。</strong>Flexcompute 的 agent-driven photonic design 说明 silicon photonics / CPO 的挑战正在从单点仿真转向自动化优化、PDK/EDA 集成、thermal/process variation 与系统验证。</li>
+          <li><strong>hybrid bonding 与 SI/PI 都在前移。</strong>200 nm W2W、1 μm D2W、Cadence/Samsung 3D-IC flow 和 MIPI A-PHY compliance 都指向同一件事：关键约束必须在架构阶段就被建模和测试。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">详细讲给你听 <span>· 母稿完整版</span></h2>
+
+      <section class="block blue">
+        <h3>01｜A 级｜Samsung HBM4E samples: 12-layer stack, 1c DRAM, 4nm base die</h3>
+        <p><strong>事实：</strong>Samsung Electronics 宣布开始向主要全球客户出货 12-layer HBM4E samples。官方称该产品使用 1c DRAM process 和 Samsung Foundry 4nm logic base die，面向下一代 AI systems。</p>
+        <p><strong>技术影响：</strong>HBM4E 的价值不只在 pin speed 或 TB/s，而在 DRAM stack、logic base die、TSV/micro-bump、thermal path、power delivery 与客户 accelerator package 的共同验证。base die 从成熟节点推进到更先进 foundry process，会放大 thermal、yield、test 和 supply chain 协同的重要性。</p>
+        <p><strong>评级依据：</strong>A 级。头部存储厂官方发布，直接命中 HBM、AI packaging、logic base die 与客户 qualification；但仍是 samples，未到量产部署和第三方系统验证。</p>
+        <p><strong>可信度/待验证：</strong>样品出货可信；待验证真实客户、功耗/bit、thermal margin、stack yield、package integration、HBM4E mass production schedule 和与 SK hynix / Micron 的系统级竞争。</p>
+        <p><strong>对你有什么用：</strong>跟踪 HBM 不要只看带宽数字，要拆成 DRAM process、base die、封装热路、PDN、测试、客户认证和 supply assurance。</p>
+        <p>来源：<a href="https://semiconductor.samsung.com/news-events/news/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples/">Samsung Semiconductor · 2026-05-29</a></p>
+      </section>
+
+      <section class="block purple">
+        <h3>02｜A 级｜Flexcompute agent-driven photonic design loop</h3>
+        <p><strong>事实：</strong>Flexcompute 发布 agent-driven loop for autonomous photonic design，强调把 AI agent 与 photonic simulation / optimization workflow 结合，用于更快设计 photonic components 和 systems。</p>
+        <p><strong>技术影响：</strong>CPO / NPO / silicon photonics 的难点是 coupling loss、thermal drift、process variation、layout constraints、optical-electrical co-design 和 system-level verification。agent-driven design 如果与 PDK、EDA、封装 thermal model 连接，可能显著降低设计迭代成本。</p>
+        <p><strong>评级依据：</strong>A 级。方向高度命中 CPO 与 design automation，且发布日期为 2026-06-02；降级点是它属于工具/方法发布，缺少公开 benchmark 和客户 silicon proof。</p>
+        <p><strong>可信度/待验证：</strong>发布可信；待验证 PDK/EDA 集成深度、真实 foundry design rule 支持、thermal/yield 预测精度和与 package co-design 的耦合能力。</p>
+        <p><strong>对你有什么用：</strong>CPO 不是只追光引擎带宽，设计自动化和仿测闭环会成为能否快速迭代到可制造产品的关键。</p>
+        <p>来源：<a href="https://www.prnewswire.com/news-releases/flexcompute-pioneers-agent-driven-loop-for-autonomous-photonic-design-302787556.html">PR Newswire / Flexcompute · 2026-06-02</a></p>
+      </section>
+
+      <section class="block orange">
+        <h3>03｜S 级｜imec / EVG 200 nm W2W hybrid bonding</h3>
+        <p><strong>事实：</strong>imec 与 EV Group 在 ECTC 2026 展示 wafer-to-wafer hybrid bonding test vehicle，宣称实现 200 nm Cu interconnect pad pitch，并强调 record high overlay accuracy 与 routable interconnects。</p>
+        <p><strong>技术影响：</strong>200 nm pitch 把 hybrid bonding 推到接近前道互连尺度的封装互连讨论区间。对 3D SRAM、logic-on-logic、logic-memory stacking 和 future HBM-like integration，关键将是 overlay、表面洁净、Cu/介质界面、退火窗口、热机械应力和可测试结构。</p>
+        <p><strong>评级依据：</strong>S 级。头部研究机构 + 关键设备商 + ECTC 场景 + 可验证 pitch 指标，且直接命中 3D packaging 与 hybrid bonding 主线。</p>
+        <p><strong>可信度/待验证：</strong>官方发布可信；待验证 electrical yield、defect density、wafer size、工艺窗口、reliability cycle，以及 W2W 向 D2W / known-good-die flow 迁移的代价。</p>
+        <p><strong>对你有什么用：</strong>评估先进封装时，pitch 必须和 overlay、yield、test vehicle 与 reliability 一起看。</p>
+        <p>来源：<a href="https://www.imec-int.com/en/press/imec-and-ev-group-demonstrate-wafer-wafer-hybrid-bonding-200nm-interconnect-pitch-and-record">imec · 2026-05-28</a></p>
+      </section>
+
+      <section class="block green">
+        <h3>04｜A 级｜CEA-Leti D2W hybrid bonding down to 1 μm pitch</h3>
+        <p><strong>事实：</strong>CEA-Leti 宣布在 ECTC 2026 报告 die-to-wafer hybrid bonding functional test vehicle，pitch down to 1 μm；5 μm 到 2 μm daisy-chain 电性结果较明确，1 μm yield 受 bonding tool alignment accuracy 限制。</p>
+        <p><strong>技术影响：</strong>D2W 更贴近异构 chiplet、known-good-die 和多尺寸 die 集成现实。1 μm D2W 的核心约束不是单一材料，而是 alignment、die size、warpage、repairability、KGD flow 和 HD TSV/TOV 组合。</p>
+        <p><strong>评级依据：</strong>A 级。官方来源、ECTC 技术结果、pitch/yield 边界清楚；但仍是 test vehicle 阶段。</p>
+        <p><strong>可信度/待验证：</strong>5-2 μm 数据可信度较高；1 μm 需要更完整 yield、throughput、warpage 和多 die scenario 数据。</p>
+        <p><strong>对你有什么用：</strong>D2W 是 chiplet 与 3D integration 的现实路线，判断时要问工具对准、KGD、可返修与测试闭环。</p>
+        <p>来源：<a href="https://www.cea.fr/cea-tech/leti/english/Pages/What%27s-On/Press%20release/Die-to-Wafer-Hybrid-Bonding-Press-Release.aspx">CEA-Leti · 2026-05-29</a></p>
+      </section>
+
+      <section class="block pink">
+        <h3>05｜A 级｜Cadence / Samsung Foundry: 2 nm and 3D-IC flow collaboration</h3>
+        <p><strong>事实：</strong>Cadence 与 Samsung Foundry 宣布扩展合作，覆盖 Memory and Interface IP portfolio，并扩大 Cadence digital、custom、3D-IC、system design and analysis flows 在 Samsung 第二代 2 nm process technology 上的认证。</p>
+        <p><strong>技术影响：</strong>这说明高速 I/O、memory PHY、3D-IC thermal/power/signal analysis、package/board co-analysis 正进入 foundry enablement 和认证体系。SI/PI 不再只是后期调板，而是 IP、封装、EDA signoff 的共同约束。</p>
+        <p><strong>评级依据：</strong>A 级。头部 EDA + foundry，主题覆盖 2 nm、3D-IC、Memory/Interface IP 和 system analysis；但未公开具体 PHY 指标或客户 silicon result。</p>
+        <p><strong>可信度/待验证：</strong>合作可信；待验证具体支持 SerDes/UCIe/DDR/LPDDR/HBM PHY 的范围、3D stack signoff 边界和 thermal-electrical co-analysis 精度。</p>
+        <p><strong>对你有什么用：</strong>看 EDA/foundry 新闻时，重点抓 IP + package + analysis flow 是否一起认证，这是 SI/PI 前移的强信号。</p>
+        <p>来源：<a href="https://www.cadence.com/ko_KR/home/company/newsroom/press-releases/pr/2026/cadence-and-samsung-foundry-deepen-2nm-and-3dic-collaboration-to.html">Cadence / Samsung Foundry · 2026-05-29</a></p>
+      </section>
+
+      <section class="block blue">
+        <h3>06｜A 级｜MIPI A-PHY compliance program</h3>
+        <p><strong>事实：</strong>MIPI Alliance 推出 A-PHY Compliance Program，并指定 BitifEye Digital Test Solutions GmbH 为授权测试实验室，目标是强化 automotive SerDes ecosystem。</p>
+        <p><strong>技术影响：</strong>高速 SerDes 从 spec 走向 compliance ecosystem，意味着 interoperability、functional safety、EMI robustness、jitter、return path、cable/connector 和 test fixture 会制度化。</p>
+        <p><strong>评级依据：</strong>A 级。标准组织官方发布，直接命中高速 SerDes、EMI、互操作和测试生态。</p>
+        <p><strong>可信度/待验证：</strong>官方可信；待验证首批 compliant device、test suite 覆盖范围、A-PHY v2.1 细节和实车 EMI margin。</p>
+        <p><strong>对你有什么用：</strong>这是仿测结合的标准化样本：channel simulation 最终要和 compliance testing 对齐。</p>
+        <p>来源：<a href="https://www.mipi.org/press-releases/mipi-alliance-launches-compliance-program-to-strengthen-a-phy-automotive-ecosystem?hs_amp=true">MIPI Alliance · 2026-05-27</a></p>
+      </section>
+
+      <section class="block purple">
+        <h3>07｜B+ 级｜CLIPGen chiplet link IP modeling</h3>
+        <p><strong>事实：</strong>CLIPGen 论文提出 chiplet link IP modeling and generation framework，用于 2.5D architecture exploration，目标是在架构早期评估 chiplet link 的 power、performance、area 和 collateral。</p>
+        <p><strong>技术影响：</strong>UCIe-like D2D link 不能只按 bandwidth 选择；interposer routing、latency、bump assignment、channel loss、PDN noise、jitter/BER 和 floorplan 会共同决定系统可行性。</p>
+        <p><strong>评级依据：</strong>B+ 级。论文预印本，方向强相关但仍需同行评审和复现实验；方法论价值高。</p>
+        <p><strong>可信度/待验证：</strong>需验证模型是否纳入真实 channel、return path、PDN noise、thermal coupling 和制造约束。</p>
+        <p><strong>对你有什么用：</strong>这类框架很适合你的 advanced packaging PISI 研究，把封装拓扑和 SI/PI 从后端仿真前移到系统架构探索。</p>
+        <p>来源：<a href="https://arxiv.org/abs/2605.27757">arXiv · 2026-05-26</a></p>
+      </section>
+
+      <section class="block orange">
+        <h3>关键术语小词典</h3>
+        <ul class="brief-list">
+          <li><strong>HBM4E base die：</strong>HBM stack 底部逻辑 die，负责接口、控制和部分信号/电源管理，先进节点会影响功耗、热和良率。</li>
+          <li><strong>W2W / D2W hybrid bonding：</strong>wafer-to-wafer / die-to-wafer 混合键合；前者对齐一致性强，后者更适合异构 die 和 known-good-die。</li>
+          <li><strong>Agent-driven photonic design：</strong>AI agent 调用光子仿真与优化流程，自动探索器件/系统设计。</li>
+          <li><strong>SDA flow：</strong>System Design and Analysis flow，把芯片、封装、板级、热、电源和信号分析纳入同一设计闭环。</li>
+          <li><strong>Compliance program：</strong>标准组织定义的合规测试体系，用于验证多厂商设备互操作和性能边界。</li>
+        </ul>
+      </section>
+
+      <section class="block green">
+        <h3>对你有什么用</h3>
+        <p>今天这版适合更新你的判断框架：HBM/CPO/hybrid bonding/SerDes 都不能只看“指标最高”，而要看客户 qualification、工艺窗口、仿测相关性、EDA signoff、thermal/PDN 和供应链成熟度。对你的先进封装 PISI 项目来说，最有价值的是把这些变量转化成可仿真、可测试、可比较的系统级 trade-off。</p>
+      </section>
+
+      <section class="block blue">
+        <h3>想深入可以搜</h3>
+        <p>Samsung HBM4E 12-layer 1c DRAM 4nm base die、Flexcompute autonomous photonic design、imec EVG 200nm hybrid bonding、CEA-Leti D2W 1um hybrid bonding、Cadence Samsung 2nm 3D-IC SDA flow、MIPI A-PHY compliance BitifEye、CLIPGen 2.5D chiplet link IP modeling。</p>
+      </section>
+
+      <h2 class="section-title">来源与发布日期</h2>
+      <section class="panel">
+        <ul class="brief-list">
+          <li>Samsung Semiconductor · 2026-05-29 · HBM4E samples</li>
+          <li>PR Newswire / Flexcompute · 2026-06-02 · Agent-driven photonic design loop</li>
+          <li>imec · 2026-05-28 · 200 nm W2W hybrid bonding</li>
+          <li>CEA-Leti · 2026-05-29 · D2W hybrid bonding down to 1 μm pitch</li>
+          <li>Cadence / Samsung Foundry · 2026-05-29 · 2 nm and 3D-IC collaboration</li>
+          <li>MIPI Alliance · 2026-05-27 · A-PHY Compliance Program</li>
+          <li>arXiv · 2026-05-26 · CLIPGen chiplet link IP modeling</li>
+        </ul>
+      </section>
+
+      <div class="footer">Generated for Daily Brief · Advanced Packaging & SI/PI</div>
+    </main>
+  </body>
+</html>
