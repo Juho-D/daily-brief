@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Packaging & SI/PI Daily Brief - 2026-06-04</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief</div>
+        <h1>晨间简报 · 2026-06-04</h1>
+        <div class="meta">8 条精选 · 5 个方向 · 补发修正版 · 含可信度判断</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日头条 · 先看这三条</h2>
+        <div class="item-card">
+          <div class="item-label">CPO / Optical I/O · A 级</div>
+          <h3 class="item-title">Lightmatter 加入 NVIDIA NVLink Fusion：photonic interconnect 进入 rack-scale AI 生态战</h3>
+          <div class="source">Lightmatter · 2026-06-03 · <a href="https://lightmatter.co/press-release/lightmatter-joins-nvidia-nvlink-fusion/">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">CPO / Optical I/O · A 级</div>
+          <h3 class="item-title">Ayar Labs 加入 NVIDIA NVLink Fusion：CPO 路线开始贴近 AI factory scale-up</h3>
+          <div class="source">Business Wire / Ayar Labs · 2026-06-03 · <a href="https://markets.financialcontent.com/stocks/article/bizwire-2026-6-3-ayar-labs-joins-nvidia-nvlink-fusion-ecosystem-to-bring-co-packaged-optics-to-rack-scale-ai-infrastructure">打开原文</a></div>
+        </div>
+        <div class="item-card">
+          <div class="item-label">Advanced Packaging · S 级</div>
+          <h3 class="item-title">imec / EVG 200 nm W2W hybrid bonding：3D interconnect pitch 进入前道级约束</h3>
+          <div class="source">imec · 2026-05-28 · <a href="https://www.imec-int.com/en/press/imec-and-ev-group-demonstrate-wafer-wafer-hybrid-bonding-200nm-interconnect-pitch-and-record">打开原文</a></div>
+        </div>
+      </section>
+
+      <section class="block green">
+        <h3>一句话讲清楚今天在说啥</h3>
+        <p>今天的主线是 <strong>optical I/O 进入 NVIDIA rack-scale ecosystem</strong>，同时 hybrid bonding、UCIe、3DIC PI 和 chiplet link modeling 继续把先进封装与 SI/PI 推向系统级闭环。判断重点不是谁喊了 CPO，而是谁能交付 BER、pJ/bit、laser/thermal、package yield、compliance 和 reference design。</p>
+      </section>
+
+      <h2 class="section-title">今日重点判断 <span>· 给你直接结论</span></h2>
+      <section class="panel">
+        <ol class="brief-list">
+          <li><strong>Optical I/O 的产业信号增强。</strong>Lightmatter 与 Ayar Labs 同时进入 NVIDIA NVLink Fusion 生态，说明 CPO/NPO 已从实验室方向走向 rack-scale AI infrastructure 的生态接口竞争。</li>
+          <li><strong>Hybrid bonding 的指标不能只看 pitch。</strong>imec/EVG 的 200 nm W2W 和 CEA-Leti 的 1 μm D2W 都有价值，但真正可量产性取决于 overlay、electrical yield、warpage、defect density、throughput 和 KGD flow。</li>
+          <li><strong>SI/PI 正被封装 IP、EDA flow 和标准生态前置。</strong>UCIe evolution、Siemens 3DIC PI flow、CLIPGen 都指向同一个趋势：package channel、PDN、return path、DFx 和 telemetry 要在架构阶段进入闭环。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">详细讲给你听 <span>· 母稿完整版</span></h2>
+
+      <section class="block blue">
+        <h3>01｜A 级｜Lightmatter joins NVIDIA NVLink Fusion</h3>
+        <p><strong>事实：</strong>Lightmatter 在 2026-06-03 宣布加入 NVIDIA NVLink Fusion ecosystem，强调用 Passage photonic interconnect 支撑 next-generation AI infrastructure。</p>
+        <p><strong>技术影响：</strong>这说明 optical I/O 不再只是 switch 或 pluggable optics 的边缘话题，而是在进入 NVIDIA rack-scale compute fabric 的生态接口。CPO/NPO 的核心将是 SerDes、DSP、laser、thermal、package 和 system validation 的联合优化。</p>
+        <p><strong>评级依据：</strong>A 级。头部 photonic interconnect 公司与 NVIDIA 生态绑定，方向高度命中 CPO / Optical I/O；但缺少可验证 BER、pJ/bit、客户部署和量产良率数据，所以不到 S 级。</p>
+        <p><strong>可信度/待验证：</strong>官方发布可信；待验证 Passage 与 NVLink Fusion 的真实集成方式、laser power、thermal drift、系统 BER、pJ/bit 和 hyperscaler deployment。</p>
+        <p><strong>对你有什么用：</strong>以后看 CPO 新闻，要拆成“光引擎 + 电接口 + 封装 + 热 + 测试 + 系统生态”，不是只看带宽 headline。</p>
+        <p>来源：<a href="https://lightmatter.co/press-release/lightmatter-joins-nvidia-nvlink-fusion/">Lightmatter · 2026-06-03</a></p>
+      </section>
+
+      <section class="block purple">
+        <h3>02｜A 级｜Ayar Labs joins NVIDIA NVLink Fusion</h3>
+        <p><strong>事实：</strong>Ayar Labs 宣布加入 NVIDIA NVLink Fusion ecosystem，目标是把 co-packaged optics 引入 rack-scale AI infrastructure，并使产品与 NVIDIA optical and SerDes technologies 兼容。</p>
+        <p><strong>技术影响：</strong>Ayar 与 Lightmatter 的同步信号说明 NVIDIA 的 AI scale-up 生态正在为 photonic interconnect 预留位置。CPO 的竞争会从单个 PIC 转向 protocol compatibility、SerDes margin、laser architecture、package integration 和可测试性。</p>
+        <p><strong>评级依据：</strong>A 级。Ayar Labs 是 CPO 代表性公司，且事件直接绑定 NVIDIA NVLink Fusion；降级点是新闻仍偏生态宣布，缺少系统级实测指标。</p>
+        <p><strong>可信度/待验证：</strong>发布可信；待验证 TeraPHY/PIC 与 NVIDIA optical/SerDes 的接口细节、量产时间、BER、pJ/bit、laser source 可靠性和 thermal envelope。</p>
+        <p><strong>对你有什么用：</strong>这条适合长期跟踪 AI factory scale-up 中 copper 到 optics 的替代节奏，以及 optical I/O 与 UCIe / NVLink / UALink 的边界。</p>
+        <p>来源：<a href="https://markets.financialcontent.com/stocks/article/bizwire-2026-6-3-ayar-labs-joins-nvidia-nvlink-fusion-ecosystem-to-bring-co-packaged-optics-to-rack-scale-ai-infrastructure">Business Wire / Ayar Labs · 2026-06-03</a></p>
+      </section>
+
+      <section class="block orange">
+        <h3>03｜S 级｜imec / EVG 200 nm W2W hybrid bonding</h3>
+        <p><strong>事实：</strong>imec 与 EV Group 在 ECTC 2026 展示 wafer-to-wafer hybrid bonding test vehicle，宣称实现 200 nm Cu interconnect pad pitch，并强调 routable interconnects 和 overlay accuracy。</p>
+        <p><strong>技术影响：</strong>200 nm pitch 让 hybrid bonding 进入接近前道互连尺度的 3D interconnect 讨论区间。它对 3D SRAM、logic-on-logic、logic-memory stacking、future HBM-like integration 都有长期影响。</p>
+        <p><strong>评级依据：</strong>S 级。头部研究机构 + 关键设备商 + ECTC 场景 + 可验证 pitch 指标，直接命中 advanced packaging 核心路线。</p>
+        <p><strong>可信度/待验证：</strong>官方发布可信；需要看 full-wafer electrical yield、defect density、warpage、anneal window、throughput 和 W2W 到 D2W / KGD flow 的迁移成本。</p>
+        <p><strong>对你有什么用：</strong>hybrid bonding 评价要同时看 pitch、overlay、yield、test vehicle 和 reliability，不要被单一最小 pitch 带偏。</p>
+        <p>来源：<a href="https://www.imec-int.com/en/press/imec-and-ev-group-demonstrate-wafer-wafer-hybrid-bonding-200nm-interconnect-pitch-and-record">imec · 2026-05-28</a></p>
+      </section>
+
+      <section class="block green">
+        <h3>04｜A 级｜CEA-Leti D2W hybrid bonding down to 1 μm pitch</h3>
+        <p><strong>事实：</strong>CEA-Leti 在 ECTC 2026 报告 die-to-wafer hybrid bonding functional test vehicle，pitch down to 1 μm，并讨论 5 μm 到 2 μm 的 daisy-chain 电性结果与后续 0.5 μm 目标。</p>
+        <p><strong>技术影响：</strong>D2W 更贴近异构 chiplet、known-good-die 和多尺寸 die 集成现实。它的瓶颈会集中在 pick/place alignment、die size、warpage、repairability、throughput 和 TSV/TOV 组合。</p>
+        <p><strong>评级依据：</strong>A 级。官方来源、ECTC 技术结果、pitch 与 yield 边界明确；但仍处 test vehicle 阶段。</p>
+        <p><strong>可信度/待验证：</strong>需要进一步验证 1 μm pitch 的 yield、0.5 μm alignment tool、KGD flow、die-level rework 和多 die 场景。</p>
+        <p><strong>对你有什么用：</strong>D2W 是 chiplet 封装更实际的量产问题入口，适合作为 CoWoS / fan-out / bridge 路线比较的变量。</p>
+        <p>来源：<a href="https://www.cea.fr/cea-tech/leti/english/Pages/What%27s-On/Press%20release/Die-to-Wafer-Hybrid-Bonding-Press-Release.aspx">CEA-Leti · 2026-05-29</a></p>
+      </section>
+
+      <section class="block pink">
+        <h3>05｜A 级｜The Evolution of UCIe</h3>
+        <p><strong>事实：</strong>Semiconductor Engineering 在 2026-06-02 讨论 UCIe 的演进，强调它从 basic die-to-die connection 发展为更完整的 advanced package chiplet 数据交接和验证规范。</p>
+        <p><strong>技术影响：</strong>UCIe 的真实挑战在 package channel、bump map、return path、PDN-induced jitter、thermal coupling、DFx、telemetry 和 interop validation。它不只是 PHY spec，而是 chiplet 系统验证框架的一部分。</p>
+        <p><strong>评级依据：</strong>A 级。专业媒体深度解读，主题直接命中 UCIe、chiplet 与 SI/PI；不是标准发布，因此不到 S。</p>
+        <p><strong>可信度/待验证：</strong>观点可信；需对照 UCIe Consortium spec、真实 PHY vendor implementation、reference channel 和 package test data。</p>
+        <p><strong>对你有什么用：</strong>做 chiplet 架构判断时，把 UCIe 看成“协议 + package + SI/PI + test/telemetry”的共同约束，而不是只看速率。</p>
+        <p>来源：<a href="https://semiengineering.com/the-evolution-of-ucie/">Semiconductor Engineering · 2026-06-02</a></p>
+      </section>
+
+      <section class="block blue">
+        <h3>06｜B+ 级｜Siemens 3D IC power integrity flow</h3>
+        <p><strong>事实：</strong>Siemens EDA Blog 讨论 3D IC power integrity analysis，强调在 Innovator3D IC 中统一 die-level、interposer/TSV、package EM 和 system assembly 的 power delivery network 评估。</p>
+        <p><strong>技术影响：</strong>2.5D/3D IC 的 PI 不再能只按 die 或 board 分块处理。TSV/interposer/package EM、IR drop、decap、return path 和 thermal coupling 会共同决定 margin。</p>
+        <p><strong>评级依据：</strong>B+ 级。内容来自 EDA 厂商博客，偏方法和产品流，但对 SI/PI workflow 有参考价值。</p>
+        <p><strong>可信度/待验证：</strong>需看真实案例、benchmark、runtime、signoff 精度和与电磁/热/时序协同的闭环程度。</p>
+        <p><strong>对你有什么用：</strong>你的 PISI 项目需要把 die/package/board PDN 作为同一个网络，而不是孤立仿真。</p>
+        <p>来源：<a href="https://blogs.sw.siemens.com/semiconductor-packaging/2026/05/11/streamlining-power-integrity-analysis-for-3d-ic-designs/">Siemens EDA Blog · 2026-05-11</a></p>
+      </section>
+
+      <section class="block purple">
+        <h3>07｜B+ 级｜CLIPGen chiplet link IP modeling</h3>
+        <p><strong>事实：</strong>CLIPGen 提出 chiplet link IP modeling and generation framework，用于 2.5D architecture exploration，并将 packaging options 与 UCIe interface 纳入 case study。</p>
+        <p><strong>技术影响：</strong>该框架代表 chiplet 早期架构探索的方向：link power、area、latency、routing feasibility 和 SI/PI margin 需要和 package choice 一起比较。</p>
+        <p><strong>评级依据：</strong>B+ 级。论文预印本，方向强相关，但还需要同行评审、复现实验和真实 package extraction 对照。</p>
+        <p><strong>可信度/待验证：</strong>需验证是否纳入真实 substrate/interposer routing、PDN/thermal coupling、channel loss 和 EDA flow。</p>
+        <p><strong>对你有什么用：</strong>适合作为 chiplet trade-off checklist：不要只看 compute/memory partition，也要看 link IP 和封装拓扑是否给得出 SI margin。</p>
+        <p>来源：<a href="https://arxiv.org/abs/2605.27757">arXiv · 2026-05-26</a></p>
+      </section>
+
+      <section class="block green">
+        <h3>08｜B 级｜GEN-Graph 2.5D PIM chiplet</h3>
+        <p><strong>事实：</strong>GEN-Graph 论文讨论 heterogeneous PIM chiplet 和 2.5D package，用 matrix-tile 与 traversal-tile 处理 graph workload。</p>
+        <p><strong>技术影响：</strong>PIM / CIM 的价值仍然是降低 data movement，但 tile 间互连、HBM/logic package I/O、workload mapping 和热/电源限制会决定系统收益。</p>
+        <p><strong>评级依据：</strong>B 级。属于 emerging topic，对 compute-in-memory 有启发，但与主线 CPO/UCIe/hybrid bonding 的直接产业牵引弱一些。</p>
+        <p><strong>可信度/待验证：</strong>需要看真实 workload、memory traffic、I/O bottleneck、热约束和与 HBM/chiplet 封装的系统级组合收益。</p>
+        <p><strong>对你有什么用：</strong>看 CIM/PIM 不要只看 TOPS/W，要问 memory traffic 是否真的减少，I/O 和 package 是否成为新瓶颈。</p>
+        <p>来源：<a href="https://arxiv.org/abs/2604.15361">arXiv · 2026-04-23</a></p>
+      </section>
+
+      <section class="block pink">
+        <h3>后续跟踪问题</h3>
+        <ol class="brief-list">
+          <li>NVIDIA NVLink Fusion 中 Lightmatter / Ayar Labs 的 optical I/O 是否会公开 reference design、BER、pJ/bit、laser power 和 thermal drift。</li>
+          <li>imec/EVG 200 nm W2W 与 CEA-Leti 1 μm D2W 能否给出 full-wafer electrical yield、overlay 分布和 defect density。</li>
+          <li>UCIe 是否会扩展到 optical PHY、3D packaging reference channel、DFx 和 telemetry。</li>
+          <li>3DIC PI/SI 工具链能否给出 die/package/board 统一 workflow 的公开 benchmark。</li>
+        </ol>
+      </section>
+
+      <section class="block orange">
+        <h3>关键术语小词典</h3>
+        <ul class="brief-list">
+          <li><strong>NVLink Fusion：</strong>NVIDIA 面向 semi-custom AI infrastructure 的 NVLink 生态接口。</li>
+          <li><strong>CPO / NPO：</strong>Co-packaged optics / near-packaged optics，把光引擎靠近或集成到计算/交换 ASIC 周边。</li>
+          <li><strong>ELS：</strong>External Laser Source，CPO 中把激光源外置以改善热、可靠性或可维护性。</li>
+          <li><strong>Hybrid bonding：</strong>通过 Cu-Cu 与 dielectric bonding 实现高密度 3D 互连。</li>
+          <li><strong>Sim-test correlation：</strong>把仿真模型与实测数据闭环校准，用于 SI/PI、PDN、warpage 和可靠性验证。</li>
+        </ul>
+      </section>
+
+      <section class="block purple">
+        <h3>对你有什么用</h3>
+        <p>今天这版适合更新你的跟踪框架：CPO/NPO 需要沿 Lightmatter、Ayar、Coherent、Marvell 与 NVIDIA/UALink/UCIe/OCI 生态看；hybrid bonding 需要按 pitch、overlay、yield、warpage、throughput、KGD flow 拆解；3DIC SI/PI 要把 die/package/board PDN、return path、channel loss 和 telemetry 放在同一闭环。</p>
+      </section>
+
+      <section class="block blue">
+        <h3>想深入可以搜</h3>
+        <p>Lightmatter NVLink Fusion Passage CPO, Ayar Labs NVLink Fusion TeraPHY, imec EVG 200 nm hybrid bonding ECTC 2026, CEA-Leti D2W hybrid bonding 1 um pitch, UCIe evolution chiplets, Siemens 3D IC power integrity Innovator3D, CLIPGen UCIe 2.5D architecture, GEN-Graph PIM chiplet 2.5D package.</p>
+      </section>
+
+      <h2 class="section-title">来源与发布日期</h2>
+      <section class="panel">
+        <ul class="brief-list">
+          <li>Lightmatter · 2026-06-03 · Joins NVIDIA NVLink Fusion ecosystem</li>
+          <li>Business Wire / Ayar Labs · 2026-06-03 · Joins NVIDIA NVLink Fusion ecosystem</li>
+          <li>imec · 2026-05-28 · 200 nm W2W hybrid bonding at ECTC 2026</li>
+          <li>CEA-Leti · 2026-05-29 · D2W hybrid bonding down to 1 μm pitch</li>
+          <li>Semiconductor Engineering · 2026-06-02 · The Evolution of UCIe</li>
+          <li>Siemens EDA Blog · 2026-05-11 · 3D IC power integrity analysis</li>
+          <li>arXiv · 2026-05-26 · CLIPGen chiplet link IP modeling</li>
+          <li>arXiv · 2026-04-23 · GEN-Graph 2.5D PIM chiplet</li>
+        </ul>
+      </section>
+
+      <div class="footer">Generated for Daily Brief · Advanced Packaging & SI/PI</div>
+    </main>
+  </body>
+</html>
