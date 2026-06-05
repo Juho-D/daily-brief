@@ -11,141 +11,183 @@
       <section class="hero">
         <div class="eyebrow">Daily Brief</div>
         <h1>晨间简报 · 2026-06-06</h1>
-        <div class="meta">8 条精选 · CPO 量产链 / C2C SerDes / UCIe / HBM / 3D System Integration · Asia/Shanghai</div>
+        <div class="meta">8 条精选 · CPO / AI Networking / HBM4E / UCIe / 3DIC SI/PI / 中国先进封装 · 飞书优先版</div>
       </section>
 
       <section class="panel headline">
         <h2>今日头条 · 先看这三条</h2>
         <div class="item-card">
           <div class="item-label">CPO / Optical I/O · S 级</div>
-          <h3 class="item-title">NVIDIA Spectrum-X CPO switch 出货信号继续发酵：CPO 的焦点从演示转向 supply chain 与 field reliability</h3>
-          <div class="source">Focus Taiwan / Economic Times · 2026-06-03 / 2026-06-04 · <a href="https://focustaiwan.tw/business/202606030022">Focus Taiwan</a> · <a href="https://m.economictimes.com/tech/artificial-intelligence/nvidia-starts-shipping-tsmc-backed-cpo-switches-to-tackle-ai-data-centre-bottlenecks/amp_articleshow/131500748.cms">Economic Times</a></div>
+          <h3 class="item-title">NVIDIA 把 Spectrum-X Ethernet Photonics 写入 Vera Rubin production 叙事，CPO 进入系统级量产验证窗口。</h3>
+          <div class="source">NVIDIA · 2026-05-31 · <a href="https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory">打开来源</a></div>
         </div>
         <div class="item-card">
-          <div class="item-label">High-Speed SI / SerDes · A 级</div>
-          <h3 class="item-title">Kandou Tigerwing 260 Gbps C2C SerDes silicon demo：package 内 D2D 与 board-level C2C 的边界开始变模糊</h3>
-          <div class="source">Chiplet Marketplace / Kandou AI · 2026-06-04 · <a href="https://chiplet-marketplace.com/insights/news/kandou-ai-chip-to-chip-interface">打开原文</a></div>
+          <div class="item-label">AI Networking / Advanced Packaging · A 级</div>
+          <h3 class="item-title">Broadcom Q2 显示 AI networking 与 custom accelerator 需求继续放大，封装、SerDes、retimer、DSP、CPO 将被一起拉紧。</h3>
+          <div class="source">Broadcom · 2026-06-03 · <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">打开来源</a></div>
         </div>
         <div class="item-card">
-          <div class="item-label">UCIe / Chiplet · A- 级</div>
-          <h3 class="item-title">InPsytech 在 COMPUTEX 展示 6nm UCIe 3.0 live demo：mixed-node chiplet integration 正进入可演示阶段</h3>
-          <div class="source">Semi IP Hub · 2026-06-04 · <a href="https://semiiphub.com/pulse/news/inpsytech-ucie">打开原文</a></div>
+          <div class="item-label">UCIe / SI/PI · A 级</div>
+          <h3 class="item-title">UCIe 与 Siemens 3DIC flow 指向同一件事：chiplet 胜负在 package channel、PDN、thermal 和 compliance telemetry。</h3>
+          <div class="source">Semiconductor Engineering / Siemens · 2026-06-02 / 2026-05-26</div>
         </div>
       </section>
 
       <section class="block green">
-        <h3>一句话讲清楚今天在说啥</h3>
-        <p>今天的主线是 <strong>AI 数据移动瓶颈开始同时拉动 optical I/O、long-reach C2C SerDes、UCIe 与 3D system integration</strong>。CPO 走向量产后，SI/PI 的关注点不再只是单条 channel，而是 package、substrate、fiber/laser、PDN、thermal、test insertion 和 field service 的系统闭环。</p>
+        <h3>一句话讲清楚今天在说什么</h3>
+        <p>今天最值得盯的是 <strong>CPO 从路线图进入 production 语境</strong>，同时 AI networking 的收入强度正在把高速 SerDes、retimer/AEC、optical DSP、CPO、HBM 与 UCIe 的 SI/PI 问题推到系统架构层。工程判断要区分事实、厂商叙事、可验证 claim 和待验证风险。</p>
       </section>
 
-      <h2 class="section-title">今日重点判断 <span>· 给你直接结论</span></h2>
+      <h2 class="section-title">今日重点判断 <span>· 直接结论</span></h2>
       <section class="panel">
         <ol class="brief-list">
-          <li><strong>CPO 正从技术路线变成供应链路线。</strong>NVIDIA CPO switch、TSMC COUPE on substrate、GF SCALE 和光组件长期采购信号放在一起看，核心问题已经转向 substrate capacity、laser capacity、optical attach、known-good optical engine 和量产测试。</li>
-          <li><strong>High-speed copper 还没有退出，但要求更凶。</strong>Kandou 260 Gbps over 200 mm 的 C2C demo 如果可复现，将把“package 内 chiplet”和“board-level memory/accelerator expansion”的架构边界重新划线。</li>
-          <li><strong>UCIe 正从 spec 走向 live demo 与 mixed-node integration。</strong>InPsytech 的 6nm UCIe 3.0 demo、UCIe evolution 与 ONFI 6400 共同指向一个判断：未来 chiplet 系统要同时验证 protocol bridge、PHY margin、power gating、SI/PI 和 system traffic。</li>
+          <li><strong>CPO 的判断标准正在从“有没有产品”转为“量产后能不能稳定跑”。</strong>NVIDIA 明确把 CPO 与 200Gb/s SerDes 写入 Spectrum-X Ethernet Photonics；后续关键是 BER、FEC latency、laser source、热漂移、现场维修和 switch-level reliability。</li>
+          <li><strong>AI networking 已经成为 advanced packaging 的需求牵引项。</strong>Broadcom 财报不是单纯财务新闻，它提示 switch ASIC、SerDes、retimer、DSP、CPO、AEC/光模块正在被百万级 XPU/GPU 集群拉到瓶颈位置。</li>
+          <li><strong>UCIe / 3DIC 的核心风险仍是仿测闭环。</strong>chiplet 接口不是 PHY IP 单点问题，而是 bump map、substrate stackup、return path、PDN noise、thermal coupling、IBIS-AMI / full-wave extraction 与 compliance telemetry 的组合验证问题。</li>
         </ol>
       </section>
 
-      <h2 class="section-title">详细讲给你听 <span>· 母稿完整版</span></h2>
+      <h2 class="section-title">母稿完整条目 <span>· 事实、影响、评级、待验证点</span></h2>
 
       <section class="block blue">
-        <h3>01｜S 级｜NVIDIA Spectrum-X CPO switch 出货信号</h3>
-        <p><strong>事实：</strong>Focus Taiwan 在 2026-06-03 报道 NVIDIA networking 高管表示公司已向 select partners 供应 Spectrum-X CPO switch；Economic Times 2026-06-04 转载并补充其与 TSMC COUPE packaging 相关，称 throughput up to 400 Tbps，产能有望在 2026 下半年提升。</p>
-        <p><strong>技术影响：</strong>这条信号把 CPO 从 roadmap / demo 推到 productization。真正难点不只是把 optical engine 放近 switch ASIC，而是 200G lane SerDes、DSP/FEC latency、external laser source、fiber attach、optical alignment、thermal drift、package yield、test insertion、field replacement 和 AI rack 网络可靠性。</p>
-        <p><strong>评级依据：</strong>S 级。NVIDIA + TSMC + CPO switch shipping + AI factory scale-up，同时命中 CPO、2.5D/3D packaging、高速 SerDes 和系统级功耗，是今天最强信号。</p>
-        <p><strong>可信度/待验证：</strong>报道可信度较高，但“开始出货”的客户、SKU、volume、field BER、pJ/bit、laser sourcing 和 RMA 机制仍需 NVIDIA/TSMC/客户后续披露交叉验证。</p>
-        <p><strong>对你有什么用：</strong>看 CPO 不能只问带宽，要建立 verification checklist：electrical channel、optical engine、laser、package thermal、ATE/SLT、field service、supply chain capacity。</p>
-        <p>来源：<a href="https://focustaiwan.tw/business/202606030022">Focus Taiwan · 2026-06-03</a>；<a href="https://m.economictimes.com/tech/artificial-intelligence/nvidia-starts-shipping-tsmc-backed-cpo-switches-to-tackle-ai-data-centre-bottlenecks/amp_articleshow/131500748.cms">Economic Times · 2026-06-04</a></p>
+        <h3>01 · S 级｜NVIDIA Spectrum-X Ethernet Photonics 进入 production 叙事</h3>
+        <p><strong>发布日期：</strong>2026-05-31。<strong>收录原因：</strong>过去 72 小时内仍是 CPO/Optical I/O 最强产业信号，且直接影响 AI factory 网络架构。</p>
+        <p><strong>事实摘要：</strong>NVIDIA 宣布 Vera Rubin 平台进入 full production ramp，并称 Spectrum-X Ethernet Photonics 是基于 CPO 的交换技术，采用 200Gb/s SerDes，面向 million-GPU AI factories。</p>
+        <p><strong>技术影响：</strong>CPO 已从演示和路线图进入系统量产验证窗口。工程问题会落在 optical engine 与 switch ASIC 的封装耦合、laser 方案、热漂移、光纤 attach、FEC/BER、SerDes margin、pJ/bit 和现场可维修性。</p>
+        <p><strong>评级依据：</strong>S 级。头部公司官方披露 + CPO + 200Gb/s SerDes + production 语境，且与 rack-scale AI networking 直接相关。</p>
+        <p><strong>可信度/待验证点：</strong>NVIDIA 官方可信；仍需客户部署、实际 SKU、出货量、系统 BER、热设计、RMA 数据和长期可靠性验证。官方表述里有前瞻性声明，不能把路线承诺等同已完成大规模现场验证。</p>
+        <p><strong>对你有什么用：</strong>看 CPO 项目时，把问题拆成 ASIC-package-channel、optical engine、laser、thermal、test、repair 六组检查项。</p>
+        <p>来源：<a href="https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory">NVIDIA Newsroom · 2026-05-31</a></p>
       </section>
 
       <section class="block purple">
-        <h3>02｜A 级｜TSMC COUPE on Substrate 与 CPO 供应链锁定</h3>
-        <p><strong>事实：</strong>TrendForce 2026-05-18 报道称 TSMC 的 COUPE on Substrate 方案预计在 2026 下半年进入量产，并指出 NVIDIA 可能通过长期协议或预付款方式提前锁定高端 substrate、laser 和 optical component capacity。</p>
-        <p><strong>技术影响：</strong>CPO 的瓶颈会沿着 advanced packaging 链条扩散：ABF substrate、silicon photonics packaging、laser/optical component、fiber/connector、thermal solution、test socket、system validation 都会被 AI scale-up 拉紧。COUPE 从 package/interposer 走向 substrate 层，意味着光电共封的 manufacturability 比单一光引擎 IP 更重要。</p>
-        <p><strong>评级依据：</strong>A 级。来源是产业链研究媒体，方向和 NVIDIA CPO shipping 信号强相关；但它含有 industry source 判断，不是 TSMC 官方完整技术披露。</p>
-        <p><strong>可信度/待验证：</strong>需等待 TSMC technical symposium paper、customer design win、substrate vendor backlog、laser vendor delivery 和 actual ramp data。</p>
-        <p><strong>对你有什么用：</strong>以后跟踪 CPO，可以把“TSMC COUPE + ABF substrate + laser vendor + CPO switch SKU”作为一条完整链路，而不是孤立看某家公司宣布布局。</p>
-        <p>来源：<a href="https://www.trendforce.com/news/2026/05/18/news-tsmc-targets-2h26-coupe-on-substrate-nvidia-could-eye-long-term-substrate-deals-amid-cpo-push/">TrendForce · 2026-05-18</a></p>
+        <h3>02 · A 级｜Broadcom Q2：AI networking 成为先进封装的需求放大器</h3>
+        <p><strong>发布日期：</strong>2026-06-03。<strong>收录原因：</strong>24-72 小时内的头部公司新信号，虽是财报，但对 AI networking、custom accelerator 与 CPO/SerDes 需求有直接指向。</p>
+        <p><strong>事实摘要：</strong>Broadcom 披露 Q2 FY2026 revenue 22.187B 美元，AI semiconductor revenue 10.8B 美元，同比增长 143%；增长来自 custom AI accelerators 和 AI networking，并预计 Q3 AI semiconductor revenue 达 16.0B 美元、同比增长超过 200%。</p>
+        <p><strong>技术影响：</strong>AI networking 的商业强度会继续拉动 102.4T switch、200G/lane SerDes、400G/lane optical DSP、retimer/AEC、CPO 与高速板级互连。封装团队需要把网络芯片功耗、逃线、供电、散热、光电协同测试放到 accelerator 之外一起看。</p>
+        <p><strong>评级依据：</strong>A 级。财务数据本身不是技术突破，但它验证了 AI networking 的需求强度，和 Broadcom CPO/SerDes/optical DSP 产品栈强相关。</p>
+        <p><strong>可信度/待验证点：</strong>财报数据可信；但财务收入不能直接证明某一 CPO SKU 的量产良率或技术优劣，需结合产品发布、客户平台和 teardown/测试数据交叉验证。</p>
+        <p><strong>对你有什么用：</strong>后续评估 AI 集群互连时，不要只盯 GPU/NPU 封装，也要跟踪 switch ASIC、retimer、AEC、DSP、CPO 与 NIC 的 SI/PI 约束。</p>
+        <p>来源：<a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">Broadcom Investor Relations · 2026-06-03</a></p>
       </section>
 
       <section class="block orange">
-        <h3>03｜A 级｜GF SCALE CPO：OCI MSA capable optical module solution</h3>
-        <p><strong>事实：</strong>GlobalFoundries 2026-05-04 发布 SCALE optical module solution for CPO，称其为 OCI MSA capable platform，支持 CWDM/DWDM、8λ/16λ 双向 DWDM demonstration、50/100 Gbps micro-ring modulators，并提到 TSV for high-speed signaling and power delivery、sub-45 μm copper pad pitch、detachable fiber serviceability 和 known-good-die testability。</p>
-        <p><strong>技术影响：</strong>这条对 advanced packaging 很关键，因为它把 CPO 的工艺变量说得比较完整：silicon photonics + TSV + copper pad pitch + fiber attach + KGD test。GF 不是追逐最先进 logic node，而是把 differentiated process 和 silicon photonics packaging 组合成 CPO manufacturing platform。</p>
-        <p><strong>评级依据：</strong>A 级。官方发布、指标具体、直接命中 CPO / 2.5D/3D / optical interconnect；降级点是仍需要客户量产与系统级 BER/power 数据。</p>
-        <p><strong>可信度/待验证：</strong>官方技术描述可信；待验证 OCI MSA compliance detail、actual module yield、thermal drift、fiber attach loss distribution、KGD screening 和与 switch ASIC 的集成案例。</p>
-        <p><strong>对你有什么用：</strong>这是很好的 CPO 术语样本：TSV、pad pitch、fiber detachability、KGD testability 这些词比“光电共封”四个字更接近工程实质。</p>
-        <p>来源：<a href="https://www.globenewswire.com/news-release/2026/05/04/3286711/0/en/GlobalFoundries-accelerates-adoption-of-co-packaged-optics-for-advanced-AI-data-centers-with-SCALE-optical-module-solution.html">GlobalFoundries / GlobeNewswire · 2026-05-04</a></p>
+        <h3>03 · A 级｜Samsung HBM4E samples：HBM 瓶颈继续向 package + thermal + PDN 转移</h3>
+        <p><strong>发布日期：</strong>2026-05-29。<strong>收录原因：</strong>本月关键官方更新，直接影响 HBM4/HBM4E 封装与系统 SI/PI。</p>
+        <p><strong>事实摘要：</strong>Samsung 宣布开始向主要全球客户发送 12-layer HBM4E samples；其 HBM4E 标称稳定 pin speed 14Gbps、可扩展到 16Gbps，单堆栈带宽最高 3.6TB/s。</p>
+        <p><strong>技术影响：</strong>更高 pin speed 和 stack bandwidth 会放大 base die、TSV/microbump、interposer routing、package PDN、warpage、thermal resistance、HBM controller timing 与系统级 SI margin 的压力。</p>
+        <p><strong>评级依据：</strong>A 级。官方样品出货、指标可验证、与 AI accelerator memory subsystem 强相关；但样品不是量产。</p>
+        <p><strong>可信度/待验证点：</strong>待验证客户 qualification、实际量产窗口、stack yield、thermal behavior、controller compatibility、package warpage 与系统良率。</p>
+        <p><strong>对你有什么用：</strong>读 HBM 新闻时，把“容量/带宽”翻译成 PDN transient、SSN、interposer loss、thermal map、microbump reliability 和 test coverage。</p>
+        <p>来源：<a href="https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples">Samsung Global Newsroom · 2026-05-29</a></p>
       </section>
 
       <section class="block green">
-        <h3>04｜A 级｜Kandou Tigerwing 260 Gbps C2C SerDes silicon demo</h3>
-        <p><strong>事实：</strong>Kandou AI 2026-06-04 宣布在 2026 TSMC Europe Technology Symposium 展示 Tigerwing C2C SerDes silicon demo，基于 TSMC 4nm，宣称 copper links running at 260 Gbps over 200 mm reach，power efficiency &lt; 1 pJ/bit，BER &lt; 1E-19。</p>
-        <p><strong>技术影响：</strong>如果这些指标能在更多 board/channel 条件下复现，long-reach C2C SerDes 会改变 AI memory expansion、multi-package accelerator、disaggregated compute/memory 的设计边界。它不是 UCIe 的替代，而是可能把 board-level copper 连接做得更像“扩展版 MCM”。</p>
-        <p><strong>评级依据：</strong>A 级。260 Gbps、200 mm、&lt;1 pJ/bit、BER &lt;1E-19 这些指标非常强，且直接命中高速 SerDes/SI；但来源是公司发布，仍需要第三方复测和 channel 条件细节。</p>
-        <p><strong>可信度/待验证：</strong>需验证 test board loss profile、equalization/FEC 条件、jitter budget、connector/temperature corners、multi-lane crosstalk、sim-test correlation 和量产 IP availability。</p>
-        <p><strong>对你有什么用：</strong>这条适合跟你 SI/PI 的“仿测结合”主题绑定：看到 BER/pJ/bit 以后，下一步就问 channel model、S-parameter、jitter decomposition 和 correlation methodology。</p>
-        <p>来源：<a href="https://chiplet-marketplace.com/insights/news/kandou-ai-chip-to-chip-interface">Chiplet Marketplace / Kandou AI · 2026-06-04</a></p>
+        <h3>04 · A- 级｜Micron COMPUTEX AI memory：HBM4 与 SOCAMM2 指向多层 memory hierarchy</h3>
+        <p><strong>发布日期：</strong>2026-06-01。<strong>收录原因：</strong>72 小时之外但仍属本周官方更新，补齐 LPDDR / module 方向。</p>
+        <p><strong>事实摘要：</strong>Micron 在 COMPUTEX 2026 展示 AI memory and storage portfolio，提到 HBM4、SOCAMM2、LPDDR-based high-capacity memory modules 等方向。</p>
+        <p><strong>技术影响：</strong>AI server memory hierarchy 可能从单一 HBM 叙事转向 HBM + LPDDR module + CXL/memory pooling 的多层结构。SI/PI 问题会从 package 内 HBM channel 扩展到模块连接器、低功耗高速 I/O、PDN impedance、training margin 与热密度。</p>
+        <p><strong>评级依据：</strong>A- 级。官方来源、方向强相关；但公开信息更偏 portfolio 展示，缺少完整 channel 指标、客户验证和量产数据。</p>
+        <p><strong>可信度/待验证点：</strong>待验证 HBM4 bandwidth/power、SOCAMM2 pinout/ecosystem、LPDDR channel compliance、server design win 与量产窗口。</p>
+        <p><strong>对你有什么用：</strong>后续做 SI/PI radar 时，把 LPDDR-style server module 和 CXL/memory pooling 也纳入，不要只看 HBM。</p>
+        <p>来源：<a href="https://investors.micron.com/news-releases/news-release-details/micron-powers-ai-everywhere-computex-2026">Micron · 2026-06-01</a></p>
       </section>
 
       <section class="block pink">
-        <h3>05｜A- 级｜InPsytech 6nm UCIe 3.0 live demo 与 ONFI 6400</h3>
-        <p><strong>事实：</strong>InPsytech 2026-06-04 在 COMPUTEX 展示 6nm UCIe 3.0 live demo，数据率 up to 24 Gbps/lane，并强调与 3nm、4nm、5nm、12nm UCIe IP 的 mixed-node interoperability；同时披露 ONFI 6400 project，目标 6400 MT/s NAND signaling。</p>
-        <p><strong>技术影响：</strong>UCIe 走向 mixed-node chiplet integration 后，系统问题会集中在 protocol bridge、streaming traffic、flow control、power gating、latency determinism、package channel 和 compliance test。ONFI 6400 则把高速存储接口的 SI/PI 问题也推到同一套验证方法里。</p>
-        <p><strong>评级依据：</strong>A- 级。live demo + UCIe 3.0 + mixed-node + ONFI 6400 都相关；但 24 Gbps/lane 不是最激进的速率，且需要更完整的互操作报告。</p>
-        <p><strong>可信度/待验证：</strong>需验证实际 link margin、package topology、PHY power、lane power gating 状态切换、protocol bridge latency、不同 node 间 PVT coverage 和 compliance coverage。</p>
-        <p><strong>对你有什么用：</strong>这条提醒你：UCIe 不只看 GT/s，还要看 traffic pattern、flow control、power state、telemetry 与可测试性。</p>
-        <p>来源：<a href="https://semiiphub.com/pulse/news/inpsytech-ucie">Semi IP Hub / InPsytech · 2026-06-04</a></p>
+        <h3>05 · A 级｜UCIe evolution：chiplet 标准的胜负在 package channel 与 compliance</h3>
+        <p><strong>发布日期：</strong>2026-06-02。<strong>收录原因：</strong>72 小时内专业媒体深度，命中 UCIe、chiplet、advanced packages 与 SI/PI。</p>
+        <p><strong>事实摘要：</strong>文章指出 UCIe 自 2022 年发布以来，已从简单 die-to-die 连接演进为覆盖多个 chiplet 与封装方式的数据交接、验证和生态规范。</p>
+        <p><strong>技术影响：</strong>UCIe 的难点不是只把 PHY 速率写进 spec，而是把 bump map、reference channel、return path、PDN-induced jitter、thermal coupling、DFx、telemetry、interop 和 compliance test 串起来。</p>
+        <p><strong>评级依据：</strong>A 级。主题高度相关，但来源是专业媒体和厂商访谈，不是新标准发布。</p>
+        <p><strong>可信度/待验证点：</strong>需对照 UCIe Consortium spec、vendor PHY implementation、reference package channel 和 multi-vendor interop results。</p>
+        <p><strong>对你有什么用：</strong>做 chiplet/封装方案时，把 UCIe 当成“协议 + package + SI/PI + test”的系统约束，而不是单点 IP。</p>
+        <p>来源：<a href="https://semiengineering.com/the-evolution-of-ucie/">Semiconductor Engineering · 2026-06-02</a></p>
       </section>
 
       <section class="block blue">
-        <h3>06｜A 级｜HBM4E / HBM4 / SOCAMM2：memory hierarchy 正牵动 package 与 SI/PI</h3>
-        <p><strong>事实：</strong>Samsung 2026-05-29 宣布 shipment of industry-first HBM4E samples，12-layer stack、16 Gbps per pin、3.6 TB/s bandwidth，并提到 thermal resistance improvement；Micron 2026-06-01 在 COMPUTEX 相关发布中强调 HBM4、SOCAMM2 与 AI memory portfolio。</p>
-        <p><strong>技术影响：</strong>HBM4E 与 SOCAMM2 的共同点是把 memory wall 变成 package/system wall。HBM 侧是 TSV/microbump、interposer routing、base die、thermal、PDN transient、SSN；SOCAMM2/LPDDR-style module 侧是 connector/channel、training margin、PDN impedance、thermal density 和 server architecture。</p>
-        <p><strong>评级依据：</strong>A 级。两家头部 memory 公司官方信号，直接关联 HBM/LPDDR/AI server memory；但仍需客户 qualification 与系统验证数据。</p>
-        <p><strong>可信度/待验证：</strong>需验证 HBM4E stack yield、controller compatibility、package warpage、real workload bandwidth、SOCAMM2 ecosystem、LPDDR channel compliance 和 thermal throttling 行为。</p>
-        <p><strong>对你有什么用：</strong>以后看到 HBM 或 LPDDR memory module 新闻，要立刻翻译成 SI/PI checklist：PDN transient、SSN、return path、interposer loss、connector model、thermal map。</p>
-        <p>来源：<a href="https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples">Samsung · 2026-05-29</a>；<a href="https://investors.micron.com/news-releases/news-release-details/micron-powers-ai-everywhere-computex-2026">Micron · 2026-06-01</a></p>
-      </section>
-
-      <section class="block purple">
-        <h3>07｜B+ 级｜JCET high-density 3D system integration facility</h3>
-        <p><strong>事实：</strong>Chiplet Marketplace 2026-06-04 报道 JCET 在江阴基地启用 high-density 3D system integration facility，约 7,000 平方米 cleanroom，首批设备已搬入，预计月底 production line readiness，面向 AI data center power module 等高密度系统集成应用。</p>
-        <p><strong>技术影响：</strong>这条是中国头部 OSAT 的产能和工艺线索。虽然不是 HBM/CoWoS 级别的公开细节，但“high-density 3D system integration + power module assembly/test + reliability validation + HVM support”说明国内 OSAT 正把先进封装从概念推向制造能力建设。</p>
-        <p><strong>评级依据：</strong>B+ 级。公司和方向重要，日期很近，命中中国头部企业；但来源不是 JCET 官方新闻稿，且技术细节、客户、良率、设备配置仍不足，所以不升 A。</p>
-        <p><strong>可信度/待验证：</strong>需等待 JCET 官方公告、年报/投资者材料、设备清单、客户认证、量产产品类别、reliability qualification 和 capacity utilization 数据。</p>
-        <p><strong>对你有什么用：</strong>中国公司线索我会按证据等级处理：facility/capex 是 B+，客户认证/量产良率才可能升 A，实测封装能力或客户量产验证才可能升 S。</p>
-        <p>来源：<a href="https://chiplet-marketplace.com/insights/news/jcet-3d-system-integration-facility">Chiplet Marketplace · 2026-06-04</a></p>
-      </section>
-
-      <section class="block orange">
-        <h3>08｜B+ 级｜Siemens 3D IC interface performance flow：早期 SI 评估前置</h3>
-        <p><strong>事实：</strong>Siemens EDA 2026-05-26 讨论 3D IC design interface performance workflow，强调 die-to-die interconnect、UCIe-style interface、package channel 和 system-level signal performance 的早期分析。</p>
-        <p><strong>技术影响：</strong>今天的 CPO、C2C SerDes、UCIe live demo 和 HBM4E 都在说明同一个问题：SI/PI 不能等 layout 后补救。channel loss、crosstalk、return path、bump assignment、PDN noise、thermal coupling、IBIS-AMI/full-wave extraction 应在 architecture/floorplan 阶段进入 trade-off。</p>
-        <p><strong>评级依据：</strong>B+ 级。EDA 厂商方法文章，不是产品硬指标；但它对你关注的“仿测结合”和 3DIC / UCIe workflow 很实用。</p>
-        <p><strong>可信度/待验证：</strong>需验证 extraction fidelity、与 VNA/TDR/BER 实测的相关性、runtime、compliance coverage、thermal/electrical co-simulation 和跨工具数据一致性。</p>
-        <p><strong>对你有什么用：</strong>这条可转成工程流程：先建 reference channel 和 PDN budget，再做 bump map/package topology，再用实测校准模型，而不是最后才救 SI margin。</p>
+        <h3>06 · B+ 级｜Siemens 3D IC interface performance flow：SI/PI 前移到 early floorplan</h3>
+        <p><strong>发布日期：</strong>2026-05-26。<strong>收录原因：</strong>本月方法论更新，虽超 72 小时但对仿测结合直接有用。</p>
+        <p><strong>事实摘要：</strong>Siemens 讨论 3D IC design interface performance workflow，强调 UCIe compliance、design feasibility、material choices、substrate stackup、package type、chiplet microbump breakout、IBIS-AMI 与 full-wave channel analysis。</p>
+        <p><strong>技术影响：</strong>2.5D/3DIC 如果等到 package layout 后才做 SI，返工成本会很高。更合理的节奏是 floorplan 阶段就把 channel loss、crosstalk、return path、power noise、thermal coupling 和 vendor models 放入 trade-off。</p>
+        <p><strong>评级依据：</strong>B+ 级。EDA 厂商博客，有方法参考价值；但仍需真实 benchmark 与 measurement correlation。</p>
+        <p><strong>可信度/待验证点：</strong>待验证 extraction fidelity、full-wave/measurement correlation、runtime、UCIe compliance coverage 和跨工具互操作。</p>
+        <p><strong>对你有什么用：</strong>可作为 CoWoS/CoWoS-L 或 chiplet package 早期 review checklist 的骨架。</p>
         <p>来源：<a href="https://blogs.sw.siemens.com/semiconductor-packaging/2026/05/26/streamlining-3d-ic-design-interface-performance/">Siemens EDA Blog · 2026-05-26</a></p>
       </section>
 
-      <h2 class="section-title">关键词小词典 <span>· 今天用得上的术语</span></h2>
-      <section class="block pink">
-        <p><strong>COUPE：</strong>TSMC 的 Compact Universal Photonic Engine，围绕 silicon photonics / CPO 的封装平台叙事，重点是光引擎、ASIC、substrate/interposer 和系统验证。</p>
-        <p><strong>OCI MSA：</strong>Optical Compute Interconnect Multi-Source Agreement，面向 AI scale-up optical interconnect 的开放规范方向。</p>
-        <p><strong>C2C SerDes：</strong>Chip-to-chip SerDes。今天 Kandou 的重点是 over 200 mm reach，这更接近 board-level expansion，而不是传统 package 内 D2D。</p>
-        <p><strong>ONFI 6400：</strong>NAND flash interface 的下一代高速目标之一，6400 MT/s 会把 equalization、controller interoperability 和 SI margin 推到更高要求。</p>
+      <section class="block purple">
+        <h3>07 · B+ 级｜Huawei τ Scaling Law：战略框架有价值，但不能替代可测指标</h3>
+        <p><strong>发布日期：</strong>2026-05-25。<strong>收录原因：</strong>本月中国头部企业 scaling framework，符合“路线/框架类也应收录”的要求。</p>
+        <p><strong>事实摘要：</strong>Huawei 发布关于 τ Scaling Law 的内容，试图用系统尺度指标讨论后 Moore era 的计算扩展，从单芯片 transistor scaling 转向 system-level scaling。</p>
+        <p><strong>技术影响：</strong>这与 advanced packaging、CPO、HBM、chiplet、memory wall、interconnect wall 是同一个大问题：算力扩展越来越依赖封装互连、光互连、存储层级、软件/架构协同，而不只是制程节点。</p>
+        <p><strong>评级依据：</strong>B+ 级。战略意义高，且来自中国头部企业；但它不是可直接复现实验结果，缺少统一第三方 benchmark。</p>
+        <p><strong>可信度/待验证点：</strong>“定律”性质需要谨慎。待验证数学定义是否稳定、能否解释不同 workload、能否指导可量化 package/interconnect design trade-off。</p>
+        <p><strong>对你有什么用：</strong>适合放在行业框架模块，用来组织 CPO/HBM/chiplet/PIM 的共同驱动力，不适合作为单项技术突破结论。</p>
+        <p>来源：<a href="https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling">Huawei · 2026-05-25</a></p>
       </section>
 
-      <h2 class="section-title">想深入可以搜 <span>· 给你留搜索词</span></h2>
+      <section class="block orange">
+        <h3>08 · B 级｜中国 OSAT / HPC 封装：先看能力证据，再看概念热度</h3>
+        <p><strong>发布日期：</strong>2026-06-06 跟踪观察。<strong>收录原因：</strong>过去 24 小时缺少新的官方量产突破，但中国 advanced packaging 供给侧是长期关注项。</p>
+        <p><strong>事实摘要：</strong>JCET 官方页面提到 HPC 场景下 advanced packaging 需求，展示 XDFOI 高密度多维异构集成方案、2D/2.5D/3D、ultra high-density bumping、large-scale flip chip 与 HVM-proven WLP 等能力表述。</p>
+        <p><strong>技术影响：</strong>中国 OSAT 能力评估要从真实封装能力出发：fine-pitch bumping、RDL/interposer、large package warpage、thermal lid、ATE/SLT、known-good-die flow、客户 qualification 与良率爬坡。</p>
+        <p><strong>评级依据：</strong>B 级。官方能力页可作为证据入口，但不是新的量产公告；公开细节仍不足以给 A 级。</p>
+        <p><strong>可信度/待验证点：</strong>官网能力表述可信但偏 marketing；需用年报、客户认证、专利/论文、设备采购、订单、teardown 和实测良率验证。</p>
+        <p><strong>对你有什么用：</strong>中国公司相关推送应优先用公告、年报、技术白皮书和实物拆解，市场文章只做背景，并标出证据等级。</p>
+        <p>来源：<a href="https://www.jcetglobal.com/en/site/high-performance-computing">JCET HPC 页面 · 跟踪入口</a></p>
+      </section>
+
+      <h2 class="section-title">后续跟踪问题 <span>· 下次优先查</span></h2>
       <section class="panel">
         <ol class="brief-list">
-          <li>NVIDIA Spectrum-X CPO switch TSMC COUPE 400Tbps BER pJ/bit</li>
-          <li>TSMC COUPE on substrate ABF substrate laser supply CPO</li>
-          <li>Kandou Tigerwing 260Gbps 200mm C2C SerDes BER jitter S-parameter</li>
-          <li>InPsytech UCIe 3.0 24Gbps lane ONFI 6400 mixed-node chiplet</li>
-          <li>JCET high-density 3D system integration facility AI power module reliability validation</li>
+          <li>NVIDIA Spectrum-X Ethernet Photonics 的实际 SKU、出货节奏、客户部署和现场 BER / reliability 数据何时公开？</li>
+          <li>Broadcom AI networking 增长中，CPO、retimer/AEC、optical DSP、switch ASIC 各自贡献如何拆分？</li>
+          <li>Samsung HBM4E 客户 qualification 是否会暴露新的 package warpage、thermal 或 controller compatibility 问题？</li>
+          <li>UCIe 多供应商互操作的公开测试能否覆盖真实 2.5D/3D package channel、PDN noise 和 thermal coupling？</li>
+          <li>中国 OSAT 的 chiplet/HPC 能力有没有客户级量产证明，而不是只停留在能力页和市场叙事？</li>
         </ol>
+      </section>
+
+      <h2 class="section-title">关键术语小词典</h2>
+      <section class="block pink">
+        <p><strong>CPO：</strong>把 optical engine 放到 switch ASIC 附近，减少高损耗 electrical channel，但引入 laser、thermal、fiber attach、test/repair 难题。</p>
+        <p><strong>200Gb/s SerDes：</strong>单 lane 高速电接口能力；到 CPO 场景下，SerDes margin、封装通道、FEC、BER 和功耗要一起评估。</p>
+        <p><strong>UCIe：</strong>它不是只有 PHY 速率，还包括 package channel、protocol、compliance、DFx 和 telemetry。</p>
+        <p><strong>IBIS-AMI / full-wave extraction：</strong>高速通道仿真常用模型/求解方法；在 chiplet 和 3DIC 中需要与测量数据闭环。</p>
+        <p><strong>SOCAMM2：</strong>面向 AI server memory hierarchy 的 compact memory module 方向，常与 LPDDR-style 高密度低功耗内存讨论在一起。</p>
+      </section>
+
+      <h2 class="section-title">对你有什么用</h2>
+      <section class="block green">
+        <p>做 CPO 评估时，优先问 laser source、optical engine attach、thermal drift、BER/FEC、repair/test、field reliability。</p>
+        <p>做 HBM4/HBM4E 评估时，优先看 PDN transient、interposer loss、microbump/TSV reliability、thermal map、controller timing。</p>
+        <p>做 UCIe/chiplet 方案时，优先把 package channel、PDN、thermal、DFx、compliance telemetry 纳入早期 architecture review。</p>
+        <p>看中国 advanced packaging 新闻时，优先找可验证工程证据，降低纯概念/市场叙事权重。</p>
+      </section>
+
+      <h2 class="section-title">想深入可以搜</h2>
+      <section class="panel">
+        <ol class="brief-list">
+          <li>NVIDIA Spectrum-X Ethernet Photonics 200Gb/s SerDes CPO BER pJ/bit</li>
+          <li>Broadcom AI networking CPO Tomahawk 6 optical DSP retimer AEC</li>
+          <li>Samsung HBM4E 16Gbps 3.6TB/s package thermal PDN warpage</li>
+          <li>UCIe reference channel compliance IBIS-AMI full-wave extraction</li>
+          <li>JCET XDFOI HPC chiplet 2.5D 3D high-density bumping</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">来源与发布日期</h2>
+      <section class="panel">
+        <ul class="brief-list">
+          <li><a href="https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory">NVIDIA Newsroom · 2026-05-31</a></li>
+          <li><a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-second-quarter-fiscal-year-2026-financial">Broadcom Investor Relations · 2026-06-03</a></li>
+          <li><a href="https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples">Samsung Global Newsroom · 2026-05-29</a></li>
+          <li><a href="https://investors.micron.com/news-releases/news-release-details/micron-powers-ai-everywhere-computex-2026">Micron · 2026-06-01</a></li>
+          <li><a href="https://semiengineering.com/the-evolution-of-ucie/">Semiconductor Engineering · 2026-06-02</a></li>
+          <li><a href="https://blogs.sw.siemens.com/semiconductor-packaging/2026/05/26/streamlining-3d-ic-design-interface-performance/">Siemens EDA Blog · 2026-05-26</a></li>
+          <li><a href="https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling">Huawei · 2026-05-25</a></li>
+          <li><a href="https://www.jcetglobal.com/en/site/high-performance-computing">JCET · 跟踪入口</a></li>
+        </ul>
       </section>
 
       <section class="footer">
