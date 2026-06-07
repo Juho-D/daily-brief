@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-06-08 晨间 Advanced Packaging & SI/PI 简报</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief · 2026-06-08</div>
+        <h1>Advanced Packaging &amp; SI/PI</h1>
+        <div class="meta">EMIB-T / CPO / Optical I/O / 224G SerDes / UCIe / HBM4E / LogicFolding</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日重点判断</h2>
+        <ol class="brief-list">
+          <li>过去 24 小时新增硬技术发布不足，今天应把 72 小时内 ECTC 2026 复盘作为主线：先进封装竞争正从单点封装能力转向封装、I/O、电源、热和测试的系统级 scaling framework。</li>
+          <li>CPO 进入早期出货叙事后，真正分歧不是“光还是电”，而是 switch-side CPO、accelerator-side optical I/O 与 near-ASIC copper 的边界重画。</li>
+          <li>SI/PI 的价值正在前移到 architecture/floorplan 阶段，HBM4/HBM4E、UCIe、224G/260G SerDes 与 SOCAMM/LPDDR 都要求仿测闭环。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">母稿条目 <span>事实、影响、可信度</span></h2>
+
+      <section class="panel">
+        <div class="item-card">
+          <div class="item-label">S 级 · Strategic Framework</div>
+          <h3 class="item-title">Intel Foundry 在 ECTC 2026 暴露更完整的封装 scaling framework</h3>
+          <div class="source">2026-06-05 · Semiconductor Engineering · <a href="https://semiengineering.com/packaging-technologies-redefine-ai-and-hpc-scalability-limits-at-ectc-2026/">source</a></div>
+          <p>报道复盘 ECTC 2026 上 Intel Foundry 相关先进封装研究，重点包括 EMIB-T、HBM4e、64 Gb/s UCIe interface performance、glass core substrate/TGV、CPO 相关研究，以及 AI/HPC 大封装可扩展性。</p>
+          <p><strong>技术影响：</strong>这不是孤立封装节点更新，而是把 bridge、HBM、UCIe、substrate、power/signal co-design 和 photonics 放进同一个 scaling framework。EMIB-T 的 TSV bridge 方向会影响跨 bridge 供电和高速信号路径；HBM4e 与 UCIe 指标必须绑定 package channel、PDN、thermal 和 compliance。</p>
+          <p><strong>评级依据：</strong>S 级。头部 foundry、ECTC 技术场景、可验证指标、多方向同时命中，属于路线框架而不是普通产品新闻。</p>
+          <p><strong>待验证：</strong>仍需 Intel technical papers、客户 tape-out、良率、warpage、HBM stack 兼容性和 UCIe margin 数据。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A+ 级 · Advanced Packaging</div>
+          <h3 class="item-title">Intel 官方 advanced packaging 页面串联 EMIB-T、Foveros、UCIe 与 1T transistor package 目标</h3>
+          <div class="source">2026-06-08 抓取 · Intel Foundry · <a href="https://www.intel.com/content/www/us/en/foundry/packaging.html">source</a></div>
+          <p>Intel Foundry 页面强调 2D/2.5D/3D packaging、logic-HBM integration、UCIe interconnect、Foveros、EMIB、EMIB-T，并把封装目标连接到 2030 年 single package 内 1 trillion transistors 的叙事。</p>
+          <p><strong>技术影响：</strong>Intel 正把 Foveros、EMIB、EMIB-T、UCIe、HBM 与 glass substrate 组织成 foundry packaging portfolio，影响 chiplet partition、HBM attach、I/O PHY、KGD、热机械约束和供应链选择。</p>
+          <p><strong>待验证：</strong>外部客户采用、封装良率、bridge/RDL pitch、UCIe compliance、热机械可靠性和产能爬坡。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · CPO / Optical I/O</div>
+          <h3 class="item-title">NVIDIA/TSMC CPO 出货信号把 switch-side CPO 推到早期量产门槛</h3>
+          <div class="source">2026-06-03/04 · Focus Taiwan / Economic Times · <a href="https://focustaiwan.tw/business/202606030022">Focus Taiwan</a> · <a href="https://m.economictimes.com/tech/artificial-intelligence/nvidia-starts-shipping-tsmc-backed-cpo-switches-to-tackle-ai-data-centre-bottlenecks/amp_articleshow/131500748.cms">Economic Times</a></div>
+          <p>报道称 NVIDIA 已向部分合作伙伴供应 Spectrum-X CPO switches；后续报道补充 TSMC COUPE packaging、约 400 Tbps 级 switch throughput 叙事，以及 2026 年下半年产能提升预期。</p>
+          <p><strong>技术影响：</strong>CPO 工程瓶颈转向 optical engine、external laser source、fiber attach、thermal drift、optical alignment、DSP/FEC latency、ATE/SLT、RMA 和 rack-level reliability。CPO 不会消灭电互连，而是把 200G-class electrical lane、package escape、PDN 与热耦合压力推近 ASIC。</p>
+          <p><strong>待验证：</strong>客户名单、量产规模、光引擎良率、laser sourcing、field BER、pJ/bit、RMA 机制和现场可维护性。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · CPO Manufacturing</div>
+          <h3 class="item-title">GlobalFoundries SCALE 给 CPO 工艺可测性提供更细颗粒度变量</h3>
+          <div class="source">2026-05-04 · GlobalFoundries · <a href="https://investors.gf.com/news-releases/news-release-details/globalfoundries-accelerates-adoption-co-packaged-optics-advanced">source</a></div>
+          <p>GF 发布 SCALE optical module solution for CPO，强调 OCI MSA capable、CWDM/DWDM、双向 DWDM demo、50/100 Gbps micro-ring modulators、TSV、sub-45 um copper pad pitch、detachable fiber serviceability 和 KGD testability。</p>
+          <p><strong>技术影响：</strong>这条把光电共封装拆成可验证工艺项：TSV、pad pitch、fiber detachability、KGD screening、micro-ring thermal behavior、CWDM/DWDM channel plan。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · SI/PI & High-Speed I/O</div>
+          <h3 class="item-title">Marvell/Luxshare 224G LR SerDes 演示说明 co-packaged copper 仍在争夺系统边界</h3>
+          <div class="source">2026-05/06 抓取 · Marvell · <a href="https://www.marvell.com/blogs/224g-long-range-serdes-scale-up-scale-inside.html">source</a></div>
+          <p>Marvell 介绍其 3nm 224G long-range SerDes 与 Luxshare-Tech CPC/backplane channel 的 OFC 2026 演示，累计传输距离约 2.5 m，目标场景包括 scale-up、scale-out 和 scale-inside AI fabrics。</p>
+          <p><strong>技术影响：</strong>Copper 仍在与 optical I/O 竞争系统边界。SI/PI 难点包括 connector model、backplane loss、retimer/FEC、crosstalk、PDN noise coupling、thermal corner 和量产测试。</p>
+          <p><strong>待验证：</strong>channel loss profile、BERT 条件、FEC、jitter decomposition、temperature corner、多 lane 串扰和第三方互操作测试。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A- 级 · UCIe</div>
+          <h3 class="item-title">UCIe 演进正在从物理连接扩展到安全数据移动和多封装适配</h3>
+          <div class="source">2026-06-02 · Semiconductor Engineering · <a href="https://semiengineering.com/the-evolution-of-ucie/">source</a></div>
+          <p>文章讨论 UCIe 从基础 die-to-die connectivity 演进到跨 chiplet、不同封装方式和安全数据移动的互连标准，并涉及 Cadence、chiplets、PHY、security 与 multi-die assemblies。</p>
+          <p><strong>技术影响：</strong>系统验证要覆盖 PHY margin、protocol stack、security state、flow control、latency determinism、power state transition、sideband/telemetry、package topology 和 compliance。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · HBM / LPDDR Memory</div>
+          <h3 class="item-title">Samsung HBM4E 与 Micron COMPUTEX portfolio 继续把 memory wall 推向 package/SI/PI wall</h3>
+          <div class="source">2026-05-29 / 2026-06-01 · Samsung / Micron · <a href="https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples">Samsung</a> · <a href="https://www.globenewswire.com/news-release/2026/06/01/3304776/0/en/micron-powers-ai-everywhere-at-computex-2026.html">Micron</a></div>
+          <p>Samsung 宣布开始出货 HBM4E samples，提到 12-layer、最高 3.6 TB/s per stack、能效和热阻改善；Micron 在 COMPUTEX 2026 展示 HBM4、SOCAMM2、DDR5 RDIMM、LPDDR5X 等 AI memory portfolio。</p>
+          <p><strong>技术影响：</strong>HBM4/HBM4E 提高 stack bandwidth 后，瓶颈会落到 base die、TSV/microbump、interposer routing、PDN transient、SSN、thermal resistance、warpage 和 controller training。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B+ 级 · China / Emerging</div>
+          <h3 class="item-title">中国 3D EDA / LogicFolding 线索值得跟踪，但证据链必须降级处理</h3>
+          <div class="source">2026-05-28 · Tom's Hardware 转述 SCMP · <a href="https://www.tomshardware.com/tech-industry/semiconductors/peking-university-builds-3d-chip-design-tool-tailored-to-huaweis-logicfolding-architecture">source</a></div>
+          <p>报道称北京大学集成电路学院展示面向 Huawei LogicFolding 架构的 3D chip design tool，采用 true-3D 优化思路，并称早期开放电路测试中 wire length 降低约 30%。</p>
+          <p><strong>技术影响：</strong>方向上说明中国路线正在尝试用系统级 3D 设计工具补偿先进制程约束，但证据链仍需原始论文、benchmark、热/电协同仿真和制造约束验证。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B+ 级 · Compute-in-Memory / Emerging</div>
+          <h3 class="item-title">compute-in-memory 与 3D heterogeneous memory 研究仍处架构验证阶段</h3>
+          <div class="source">2026-05-18 · arXiv · <a href="https://arxiv.org/abs/2605.18612">source</a></div>
+          <p>相关论文围绕 CPO/SoIC/heterogeneous AI memory 场景讨论热光耦合、调度提示层和系统稳定性，反映 emerging memory/optical/package 协同问题正在被系统化建模。</p>
+          <p><strong>技术影响：</strong>真正工程价值不在单一 device claim，而在 workload、thermal sensor、link margin 和 control loop 的闭环。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>后续跟踪问题</h2>
+        <ol class="brief-list">
+          <li>Intel EMIB-T 的 64 Gb/s UCIe 与 HBM4e 指标是在什么 channel loss、temperature、FEC/equalization 和 package topology 下取得？</li>
+          <li>NVIDIA Spectrum-X CPO 是否会公开客户、SKU、RMA 流程、laser redundancy、field BER 和 pJ/bit 数据？</li>
+          <li>GF SCALE 的 detachable fiber 与 KGD testability 是否能在高 volume switch CPO 或 accelerator optical I/O 中复现？</li>
+          <li>224G/260G copper link 与 optical I/O 的系统边界如何按 reach、power、serviceability、latency、thermal 和 rack topology 重画？</li>
+          <li>HBM4E/SOCAMM2 的真实瓶颈会先出现在 stack yield、controller training、PDN transient、thermal throttling 还是供应链 capacity？</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>关键术语小词典</h2>
+        <div class="block blue"><h3>EMIB-T</h3><p>Intel EMIB 的 TSV bridge 方向，用 embedded bridge 缩短信号/电源路径；重点看 bridge parasitic、PDN 和热机械可靠性。</p></div>
+        <div class="block green"><h3>TGV</h3><p>Through-glass via。玻璃基板路线的核心垂直互连，优点是高频损耗与尺寸潜力，难点是量产、warpage 和可靠性。</p></div>
+        <div class="block pink"><h3>CPO / CPC</h3><p>CPO 把光引擎靠近 ASIC；CPC 用更近距离铜互连支撑 scale-up/scale-inside。两者需要按 reach、功耗、维护性、延迟和热约束比较。</p></div>
+        <div class="block orange"><h3>UCIe compliance</h3><p>不只是 PHY eye，还包括 protocol、sideband、power state、security、interoperability 和 package channel 的系统测试。</p></div>
+        <div class="block purple"><h3>SOCAMM2</h3><p>面向 AI server memory hierarchy 的 LPDDR 类模块路线，重点看容量、带宽、连接器通道、散热和平台生态。</p></div>
+      </section>
+
+      <section class="panel">
+        <h2>对你有什么用</h2>
+        <ol class="brief-list">
+          <li>把今天主线整理为三张验证表：advanced package topology、optical/copper I/O trade-off、HBM/SOCAMM memory SI/PI budget。</li>
+          <li>供应商材料中，只把带 channel、temperature、FEC、BER、PDN、thermal 条件的数字当作工程输入；缺少边界条件的 claim 先降级处理。</li>
+          <li>比较 CoWoS/EMIB/SoIC/COUPE/光电共封装时，把封装名词翻译成 S-parameter、PDN impedance、thermal map、warpage、ATE/SLT coverage 和 field service。</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>想深入可以搜</h2>
+        <ol class="brief-list">
+          <li>Intel Foundry ECTC 2026 EMIB-T HBM4e 64Gb/s UCIe glass substrate TGV CPO</li>
+          <li>NVIDIA Spectrum-X CPO TSMC COUPE switch 400Tbps laser field replacement</li>
+          <li>GlobalFoundries SCALE OCI MSA TSV sub-45um pad pitch KGD detachable fiber</li>
+          <li>Marvell Luxshare 224G LR SerDes CPC backplane 2.5m SI PI jitter</li>
+          <li>Samsung HBM4E 3.6TB/s thermal resistance PDN TSV microbump</li>
+          <li>UCIe evolution security flow control power state chiplet compliance</li>
+          <li>Huawei LogicFolding true 3D EDA wire length thermal power integrity</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>来源与发布日期</h2>
+        <ol class="brief-list">
+          <li>Semiconductor Engineering, 2026-06-05, Packaging Technologies Redefine AI And HPC Scalability Limits At ECTC 2026</li>
+          <li>Intel Foundry, 2026-06-08 抓取, Advanced Packaging Innovations</li>
+          <li>Focus Taiwan, 2026-06-03, NVIDIA CPO switch shipping signal</li>
+          <li>Economic Times, 2026-06-04, NVIDIA starts shipping TSMC-backed CPO switches</li>
+          <li>GlobalFoundries, 2026-05-04, SCALE optical module solution for CPO</li>
+          <li>Marvell, 2026-05/06 抓取, 224G Long-Range SerDes for Scale-up and Scale-inside</li>
+          <li>Semiconductor Engineering, 2026-06-02, The Evolution Of UCIe</li>
+          <li>Samsung Global Newsroom, 2026-05-29, HBM4E samples</li>
+          <li>Micron / GlobeNewswire, 2026-06-01, COMPUTEX 2026 AI memory portfolio</li>
+          <li>Tom's Hardware, 2026-05-28, Peking University / Huawei LogicFolding EDA report</li>
+          <li>arXiv, 2026-05-18, optical/thermal heterogeneous packaging research</li>
+        </ol>
+      </section>
+
+      <div class="footer">Generated 2026-06-08 Asia/Shanghai · Full HTML archive for Advanced Packaging &amp; SI/PI</div>
+    </main>
+  </body>
+</html>
