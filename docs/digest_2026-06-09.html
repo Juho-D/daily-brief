@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-06-09 晨间 Advanced Packaging & SI/PI 简报</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief · 2026-06-09</div>
+        <h1>Advanced Packaging &amp; SI/PI</h1>
+        <div class="meta">CPO HVM / EMIB-T / UCIe 3.0 / 224G SerDes / HBM4E / 2.5D DSE</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日重点判断</h2>
+        <ol class="brief-list">
+          <li>过去 24 小时硬新闻不足，今天扩展到 72 小时和本月关键更新；主线是 CPO、UCIe、HBM 与 2.5D/3D 封装同时把瓶颈推向 package channel、PDN、thermal、test 和 field service。</li>
+          <li>CPO 正从“能不能把光放进封装”转向“能不能量产、测试、维修”。Lightmatter OIP 与 GF SCALE 都把 known-good optical engine、detachable fiber、assembly/test、quality/reliability 放在核心位置。</li>
+          <li>SI/PI 工作正在前移到 architecture exploration。UCIe 3.0、Marvell 224G LR SerDes、HBM4E 与 CLIPGen 共同说明早期架构阶段就要把 link、interposer/bridge、connector、PDN 与 thermal 合并评估。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">母稿条目 <span>事实、影响、可信度</span></h2>
+
+      <section class="panel">
+        <div class="item-card">
+          <div class="item-label">S 级 · Strategic Framework</div>
+          <h3 class="item-title">Intel Foundry advanced packaging 把 EMIB/Foveros/UCIe/test 串成系统级封装路线</h3>
+          <div class="source">2026-06-09 抓取 · Intel Foundry · <a href="https://www.intel.com/content/www/us/en/foundry/packaging.html">source</a></div>
+          <p><strong>事实摘要：</strong>Intel Foundry 页面强调 2D/2.5D/3D packaging、UCIe、EMIB、EMIB-T、Foveros、Foveros Direct 3D、EMIB 3.5D 与 advanced chiplet test，并给出 2030 年单封装 1 trillion transistors 的目标。</p>
+          <p><strong>技术影响：</strong>这不是普通产品页，而是 scaling framework：chiplet partition、logic-HBM、die-to-die PHY、embedded bridge、hybrid bonding、known-good die、burn-in、final test 和 SLT 被放进同一条 foundry service chain。</p>
+          <p><strong>评级依据：</strong>S 级。头部 foundry 官方路线页，覆盖 2.5D/3D、UCIe、HBM、hybrid bonding 与测试闭环。</p>
+          <p><strong>待验证：</strong>客户 tape-out、良率、warpage、UCIe compliance、thermal-mechanical reliability 和外部量产案例。</p>
+          <p><strong>对你有什么用：</strong>评估封装时，必须追问 bridge topology、PDN、HBM attach、UCIe PHY、known-good die、ATE/SLT 覆盖和热机械裕量。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · CPO / Optical I/O</div>
+          <h3 class="item-title">Lightmatter OIP 摘要把 CPO 量产风险拆成可验证项目</h3>
+          <div class="source">2026-06-17 会议预告 · Lightmatter · <a href="https://lightmatter.co/event/optical-interconnect-and-packaging-conference/">source</a></div>
+          <p><strong>事实摘要：</strong>Lightmatter 将在 OIP 2026 报告 From Pluggable to Co-Packaged: Scaling Silicon Photonics HVM for CPO，摘要点名 known-good optical engines、scalable detachable fiber attachment、assembly、packaging、test、cost、quality、reliability 和 hyperscale volume。</p>
+          <p><strong>技术影响：</strong>CPO 风险从光引擎性能转向制造现实：KGD、fiber attach repeatability、laser/thermal drift、package optical alignment、ATE/SLT、field replacement 和 RMA。</p>
+          <p><strong>评级依据：</strong>A 级。官方会议摘要命中 CPO 量产工程变量，但仍需完整报告和量产数据。</p>
+          <p><strong>待验证：</strong>BER、pJ/bit、良率、fiber detach cycle、laser redundancy 和现场维修流程。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · CPO Manufacturing</div>
+          <h3 class="item-title">GlobalFoundries SCALE 给 CPO 工艺可测性提供更具体颗粒度</h3>
+          <div class="source">2026-05-04 · GlobalFoundries · <a href="https://investors.gf.com/news-releases/news-release-details/globalfoundries-accelerates-adoption-co-packaged-optics-advanced">source</a></div>
+          <p><strong>事实摘要：</strong>GF 发布 SCALE optical module solution for CPO，强调 OCI MSA capable、CWDM/DWDM、50/100 Gbps micro-ring modulators、TSV、sub-45 um copper pad pitch、detachable fiber serviceability 和 KGD testability。</p>
+          <p><strong>技术影响：</strong>SCALE 把 CPO 拆成可制造、可测试、可维修的单元。TSV、pad pitch、fiber detachability、micro-ring thermal behavior、DWDM channel plan 和 KGD screening 都是 HVM 变量。</p>
+          <p><strong>评级依据：</strong>A 级。GF 是头部 foundry/silicon photonics 供应链公司，给出可验证工艺和测试关键词。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · SI/PI &amp; High-Speed I/O</div>
+          <h3 class="item-title">Marvell/Luxshare 224G LR SerDes 说明铜互连仍在争夺 rack/tray 边界</h3>
+          <div class="source">2026-05-26 · Marvell Blog · <a href="https://www.marvell.com/blogs/224g-long-range-serdes-scale-up-scale-inside.html">source</a></div>
+          <p><strong>事实摘要：</strong>Marvell 介绍 3nm 224G long-range SerDes 与 Luxshare-Tech CPC/backplane/CPC channel 的 OFC 2026 演示：累计 2.5 m、8 lane、48 dB end-to-end bump loss、lane BER 1e-11，并提到 4 pJ/bit 内部估计。</p>
+          <p><strong>技术影响：</strong>copper、near-packaged optics、CPO 与 optical I/O 的边界不是固定的。SI/PI 压力集中在 connector model、backplane loss、crosstalk、FEC latency、PDN noise coupling、thermal corner 和量产测试。</p>
+          <p><strong>待验证：</strong>部分数据为内部估计；需要 channel loss profile、jitter decomposition、FEC 条件、多 lane 串扰、温度 corner 和第三方互操作测试。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · UCIe / Chiplet Standards</div>
+          <h3 class="item-title">UCIe 3.0 的 48/64 GT/s 与 manageability 把验证边界推到系统生命周期</h3>
+          <div class="source">2026-06-09 抓取 · UCIe Consortium / BusinessWire · <a href="https://www.uciexpress.org/specifications">spec</a> · <a href="https://www.businesswire.com/news/home/20250805909613/en/UCIe-Consortium-Introduces-3.0-Specification-With-64-GTs-Performance-and-Enhanced-Manageability">release</a></div>
+          <p><strong>事实摘要：</strong>UCIe 3.0 支持 UCIe-S 和 UCIe-A 的 48/64 GT/s，强调 bandwidth density、power efficiency、system-level manageability、runtime recalibration、extended sideband reach、early firmware download 和 priority sideband packets。</p>
+          <p><strong>技术影响：</strong>64 GT/s 会把 bump pitch、package loss、return path、power state transition、recalibration、sideband reach、firmware loading、debug 和 compliance 放进同一个验证域。</p>
+          <p><strong>评级依据：</strong>A 级。标准组织规格页和正式发布稿给出可验证指标；今天作为当前标准基线使用。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · HBM / Memory</div>
+          <h3 class="item-title">Samsung HBM4E sample 与 Micron AI memory portfolio 把 memory wall 推向 package wall</h3>
+          <div class="source">2026-05-29 / 2026-06-01 · Samsung / Micron · <a href="https://news.samsung.com/global/samsung-electronics-begins-shipment-of-industry-first-hbm4e-samples">Samsung</a> · <a href="https://www.globenewswire.com/news-release/2026/06/01/3304776/0/en/micron-powers-ai-everywhere-at-computex-2026.html">Micron</a></div>
+          <p><strong>事实摘要：</strong>Samsung 宣布向主要全球客户出货 12-layer HBM4E samples，称速度最高 16 Gbps，并强调能效和热性能改进。Micron 在 COMPUTEX 2026 展示 HBM4、SOCAMM2、DDR5 RDIMM、LPDDR5X 等 AI memory portfolio。</p>
+          <p><strong>技术影响：</strong>HBM4/HBM4E 提高 stack bandwidth 后，瓶颈会落到 base die、TSV/microbump、interposer routing、PDN transient、SSN、thermal resistance、warpage 和 controller training。</p>
+          <p><strong>待验证：</strong>客户 qualification、真实 workload bandwidth、HBM4E stack yield、controller compatibility、thermal throttling、SOCAMM2 ecosystem 和 LPDDR channel compliance。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B+ 级 · Emerging / 2.5D Architecture</div>
+          <h3 class="item-title">CLIPGen 显示架构阶段需要 package-aware link IP 建模</h3>
+          <div class="source">2026-05-26 · arXiv · <a href="https://arxiv.org/abs/2605.27757">source</a></div>
+          <p><strong>事实摘要：</strong>CLIPGen 面向 2.5D architecture exploration，为不同 packaging 和 communication 配置提供 power/performance/area estimates，并生成 Verilog、Liberty、LEF、datasheet；case study 评估不同 package options 下的 UCIe interfaces。</p>
+          <p><strong>技术影响：</strong>这是仿测结合向左移动的信号。架构师应在 DSE 阶段估计 link energy、area、latency、routing、die edge utilization 与 package option trade-off。</p>
+          <p><strong>待验证：</strong>模型精度、与 EM/PDN/thermal solver 的耦合、真实工艺/封装参数、UCIe compliance 和工业案例复现。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>后续跟踪问题</h2>
+        <ol class="brief-list">
+          <li>Intel EMIB-T 的 TSV bridge 对 UCIe/HBM channel loss、PDN impedance 和 thermal path 的量化改善何时公开？</li>
+          <li>Lightmatter 和 GF 的 CPO HVM 路线是否能给出 optical engine KGD 良率、detachable fiber 寿命、field BER 和 RMA 数据？</li>
+          <li>224G/260G copper link 与 accelerator-side optical I/O 的系统边界，会按 reach、pJ/bit、FEC latency、serviceability 还是 rack topology 重画？</li>
+          <li>UCIe 3.0 的 64 GT/s 在不同 package option 下，谁能先公开第三方互操作和 compliance margin？</li>
+          <li>HBM4E 的真实瓶颈会先出现在 stack yield、controller training、PDN transient、thermal throttling 还是供应链 capacity？</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>关键术语小词典</h2>
+        <div class="block blue"><h3>EMIB-T</h3><p>Intel EMIB 的 TSV bridge 方向，用 embedded bridge 缩短信号/电源路径；重点看 bridge parasitic、PDN 与热机械可靠性。</p></div>
+        <div class="block green"><h3>Known-good optical engine</h3><p>CPO 中先筛好的光引擎单元。没有 KGOE，后续封装和系统级维修成本会被缺陷放大。</p></div>
+        <div class="block pink"><h3>Runtime recalibration</h3><p>UCIe 3.0 中用于运行期链路调谐的机制，目标是改善功耗和可靠性，但会增加验证状态空间。</p></div>
+        <div class="block orange"><h3>CLIPGen</h3><p>面向 2.5D 架构探索的 chiplet link IP 建模/生成框架，用来在早期比较 package 与互连方案。</p></div>
+      </section>
+
+      <section class="panel">
+        <h2>对你有什么用</h2>
+        <ul class="brief-list">
+          <li>把封装路线整理成验证矩阵：package topology、I/O PHY、PDN、thermal、test、field service。</li>
+          <li>CPO 评估从 throughput claim 转向 HVM checklist：光引擎筛选、光纤可拆装、封装后测试、现场维修、pJ/bit 和 BER。</li>
+          <li>UCIe/HBM/SerDes 项目要在 architecture review 阶段加入 SI/PI 风险，而不是等版图和封装定案后补救。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>想深入可以搜</h2>
+        <ol class="brief-list">
+          <li>Intel EMIB-T Foveros Direct UCIe advanced chiplet test</li>
+          <li>Lightmatter CPO HVM known-good optical engine detachable fiber</li>
+          <li>GlobalFoundries SCALE CPO TSV sub-45 um pad pitch KGD testability</li>
+          <li>Marvell 224G LR SerDes CPC backplane 48 dB BER 4 pJ bit</li>
+          <li>UCIe 3.0 64 GT/s runtime recalibration extended sideband</li>
+          <li>CLIPGen UCIe 2.5D package architecture exploration</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>来源与发布日期</h2>
+        <ul class="brief-list">
+          <li>Intel Foundry advanced packaging，2026-06-09 抓取。</li>
+          <li>Lightmatter OIP 2026 talk page，会议日期 2026-06-17，2026-06-09 抓取。</li>
+          <li>GlobalFoundries SCALE，2026-05-04。</li>
+          <li>Marvell 224G LR SerDes，2026-05-26。</li>
+          <li>UCIe specifications，2026-06-09 抓取；UCIe 3.0 release，2025-08-05。</li>
+          <li>Samsung HBM4E samples，2026-05-29；Micron COMPUTEX 2026，2026-06-01。</li>
+          <li>CLIPGen，2026-05-26。</li>
+        </ul>
+      </section>
+
+      <div class="footer">Generated for Daily Brief · Advanced Packaging &amp; SI/PI</div>
+    </main>
+  </body>
+</html>
