@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-06-12 晨间 Advanced Packaging & SI/PI 简报</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief · 2026-06-12</div>
+        <h1>Advanced Packaging &amp; SI/PI</h1>
+        <div class="meta">CPO Test / EMIB-T / HBM Inspection / LPDDR6 / CIM PDN</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日重点判断</h2>
+        <ol class="brief-list">
+          <li>过去 24 小时公开可核验的强相关硬新闻仍偏少，今天按规则扩展到近 72 小时、本周 ECTC 2026 与本月关键更新。主线不是单点封装工艺，而是 advanced packaging 正在被 testability、PDN、thermal、optical/electrical co-design 和 supply-chain ramp 共同约束。</li>
+          <li>CPO 继续从“带宽/功耗叙事”转向“量产测试叙事”。如果 package-level optical/electrical ATE、DIB、fiber alignment、thermal stress、yield data stitching 没有闭环，CPO 很难从 demo 走到千万级出货。</li>
+          <li>LPDDR6/SOCAMM2/PIM、HBM inspection 和 DRAM CIM PDN 三条线合在一起看，说明 memory 不只是容量和带宽问题。未来评估 AI/HPC memory path，要同步看 channel margin、低压 PDN、thermal hotspot、test insertion 和 failure analysis。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">母稿条目 <span>事实、影响、可信度</span></h2>
+
+      <section class="panel">
+        <div class="item-card">
+          <div class="item-label">S 级 · CPO / Optical I/O Test</div>
+          <h3 class="item-title">CPO testing ramp 暴露光电共封装量产的硬约束</h3>
+          <div class="source">2026-06-09 · Semiconductor Engineering · <a href="https://semiengineering.com/co-packaged-optics-testing-faces-steep-data-center-ramp/">source</a></div>
+          <p><strong>事实摘要：</strong>Semiconductor Engineering 指出，CPO 若要从百万级走向千万级甚至更高出货，必须先解决自动化、成本可控的 electrical + optical package test。文章明确把 DIB、DUT socketing、warpage、fiber coupling、optical connector variability、ATE instrumentation、thermal handling 和 yield data management 放在同一条量产链路里。</p>
+          <p><strong>技术影响：</strong>CPO 的 SI/PI 问题不再只发生在 electrical SerDes 端。optical insertion loss、polarization-dependent loss、fiber alignment、laser count、BER/eye/link margin、thermal drift 与 electrical ATE 数据需要同步采集和关联。否则量产 yield loss 会被误判成器件问题，实际可能来自 fixture、socket、fiber port 或 DIB 差异。</p>
+          <p><strong>评级依据：</strong>S 级。主题命中 CPO 高量产瓶颈，且直接覆盖 optical-electrical co-packaging、test、signal integrity、thermal 和 data analytics。</p>
+          <p><strong>可信度/待验证点：</strong>方向可信，但仍需客户级良率、BER、field RMA、optical connector lifetime、dual-domain ATE 数据格式和实际 test cost 公开验证。</p>
+          <p><strong>对用户有什么用：</strong>看 CPO 项目时，优先问四件事：光引擎 KGD 怎么筛，封装后 optical/electrical 怎么同测，热漂移和连接器污染怎么建模，yield data 能否追溯到 DIB/socket/fiber port。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">S 级 · 2.5D/3D / Foundry Roadmap</div>
+          <h3 class="item-title">Intel Foundry 在 ECTC 2026 把 EMIB-T、CPO、glass substrate、HBM4e 与 UCIe 放入同一封装框架</h3>
+          <div class="source">2026-06-05 · Semiconductor Engineering / Intel Foundry · <a href="https://semiengineering.com/packaging-technologies-redefine-ai-and-hpc-scalability-limits-at-ectc-2026/">source</a></div>
+          <p><strong>事实摘要：</strong>Intel Foundry 介绍 ECTC 2026 packaging 论文与展示，覆盖 EMIB-T、Foveros Direct、co-packaged optics、glass substrates、assembly/test、thermal-mechanical reliability 与 system technology co-optimization。文中给出 EMIB-T 面向 25 um FLI bump pitch、120 x 120 mm package、超过 9x reticle compute/memory silicon content、HBM4e 12 Gb/s 与 UCIe 64 Gb/s 的目标。</p>
+          <p><strong>技术影响：</strong>先进封装竞争点正在从“桥接密度”扩展到“系统级可制造性”。EMIB-T bridge parasitic、TSV power delivery、HBM channel、UCIe PHY、glass substrate flatness、CPO coupling、warpage 和 test coverage 必须在 architecture/floorplan 阶段一起评估。</p>
+          <p><strong>评级依据：</strong>S 级。头部美国 foundry 的技术路线，覆盖 2.5D/3D、CPO、UCIe、HBM、SI/PI 和 test。</p>
+          <p><strong>可信度/待验证点：</strong>路线可信，但具体客户 silicon、yield、UCIe compliance margin、HBM4e channel data、glass substrate warpage、CPO optical loss 和 ATE/SLT throughput 仍待验证。</p>
+          <p><strong>对用户有什么用：</strong>封装评审表要升级为 co-optimization matrix：die edge assignment、bridge/TSV topology、return path、PDN target impedance、thermal gradient、CPO test access 和 KGD 策略同时进入 day-0。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · HBM / Inspection / Failure Analysis</div>
+          <h3 class="item-title">3D X-ray inspection 把 HBM 缺陷检测推到量产前台</h3>
+          <div class="source">2026-06-09 · Semiconductor Engineering / Nordson Test &amp; Inspection · <a href="https://semiengineering.com/enhancing-high-bandwidth-memory-hbm-reliability-with-3d-x-ray-inspection/">source</a></div>
+          <p><strong>事实摘要：</strong>文章讨论 3D X-ray/CT 对 HBM reliability 的作用，重点覆盖 TSV integrity、micro-bump 与 die-to-die bond inspection、die shift/alignment、void/inclusion analysis，并区分 Micro CT 与面向较高吞吐的 limited-angle 3D imaging。</p>
+          <p><strong>技术影响：</strong>HBM4/HBM4E、hybrid bonding、microbump、TSV、interposer 与 2.5D/3D assembly 都会放大 hidden defect escape cost。inspection 不能作为孤立 QC，而要和 electrical test、thermal cycling、warpage metrology、SLT 与 failure analysis 闭环。</p>
+          <p><strong>评级依据：</strong>A 级。发布时间新，主题强相关 HBM、advanced packaging quality、test/inspection；但属于 sponsor blog 和方法说明，不是独立芯片发布。</p>
+          <p><strong>可信度/待验证点：</strong>需要验证 resolution、throughput、false positive/false negative、inline deployment cost、AI defect classification 与 electrical FA correlation。</p>
+          <p><strong>对用户有什么用：</strong>做 HBM/2.5D 项目时，把 inspection plan 写进 test strategy：哪些缺陷靠 X-ray/CT，哪些靠 electrical stress，哪些必须靠 thermal/mechanical stress 才暴露。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · LPDDR / PIM / Memory Architecture</div>
+          <h3 class="item-title">LPDDR6 roadmap 正把低功耗内存推向 data center 与 PIM</h3>
+          <div class="source">2026-06-03 · EE Times / JEDEC roadmap discussion · <a href="https://www.eetimes.com/lpddr6-roadmap-leads-to-the-data-center/">source</a></div>
+          <p><strong>事实摘要：</strong>EE Times 报道 JEDEC LPDDR6 后续更新将面向 data center 和 accelerated computing workload，涉及 x6 per-die interface、512 GB 级容量目标、LPDDR6 SOCAMM2 module standard，以及接近完成的 LPDDR6 PIM 标准。文中也提到 SOCAMM 相对 conventional modules 的带宽/能耗叙事。</p>
+          <p><strong>技术影响：</strong>LPDDR6 若进入 AI server memory hierarchy，SI/PI 关注点会从传统 DIMM channel 转向更短、更密、更低电压、更强调 serviceable module 的 board/package co-design。SOCAMM2 connector parasitic、DQ/DQS timing、training、PDN droop、thermal throttling 和 PIM coherence 都会成为系统级验证项。</p>
+          <p><strong>评级依据：</strong>A 级。来源为专业媒体对 JEDEC roadmap 的整理，命中 LPDDR、PIM 和 data center memory；但标准和生态仍在推进中。</p>
+          <p><strong>可信度/待验证点：</strong>需要 JEDEC 最终规范、公开 channel model、controller support、module mechanical spec、server qualification、PIM programming model 和 interoperability test。</p>
+          <p><strong>对用户有什么用：</strong>评估 LPDDR6/SOCAMM2 时不要只看 bandwidth/W，要同步检查 connector/channel margin、PDN transient、thermal map、training margin 和 PIM 是否真实减少数据搬运。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · OSAT / Advanced Packaging Capacity</div>
+          <h3 class="item-title">Amkor ECTC 2026 显示 OSAT 正把 packaging、test、thermal 和美国本土产能打包成 AI/HPC 服务</h3>
+          <div class="source">2026-06-05 · Amkor · <a href="https://amkor.com/blog/amkor-ectc-2026-advanced-packaging/">source</a></div>
+          <p><strong>事实摘要：</strong>Amkor 在 ECTC 2026 展示面向 AI/HPC、photonics、advanced memory 的 S-Connect、S-SWIFT、wafer-level packaging、co-packaged optics 等平台，并强调 system-level design challenges，包括 signal integrity、thermal performance、scalability、transition to high-volume manufacturing，以及 Arizona advanced packaging/test capacity。</p>
+          <p><strong>技术影响：</strong>OSAT 角色正在从后段代工扩展为 design-to-HVM partner。对 chiplet/CPO/HBM 客户而言，package architecture、DFx、underfill/lid/thermal、ATE/SLT、failure analysis、RMA 和区域供应链风险需要在供应商选择时一起评估。</p>
+          <p><strong>评级依据：</strong>A 级。头部美国 OSAT 官方信息，虽然营销属性较强，但与先进封装产能、test、thermal 和美国供应链直接相关。</p>
+          <p><strong>可信度/待验证点：</strong>需要具体 package vehicle、substrate source、HBM attach capability、warpage data、ATE/SLT coverage、客户案例和产能爬坡数据。</p>
+          <p><strong>对用户有什么用：</strong>供应链评估不要只比报价和产能，要问 OSAT 是否能提前介入 stack-up、thermal lid、DFx、test insertion、yield learning 与 RMA 诊断。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A- 级 · Panel-Level Packaging / Greater China Supply Chain</div>
+          <h3 class="item-title">ASE 310 mm panel-level packaging 暗示 fan-out/bridge 的成本曲线还在重写</h3>
+          <div class="source">2026-05-26 · DigiTimes Asia · <a href="https://www.digitimes.com/news/a20250526PD214/ase-panel-level-packaging-fan-out-packaging.html">source</a></div>
+          <p><strong>事实摘要：</strong>DigiTimes Asia 报道 ASE 推进 310 mm panel-level packaging production line，并与 fan-out/advanced packaging 产能和成本效率相关。ASE 是全球头部 OSAT，也是大中华区先进封装供应链关键公司。</p>
+          <p><strong>技术影响：</strong>panel-level packaging 若成熟，会改变 fan-out、bridge、RDL 与 chiplet packaging 的成本/良率曲线，但 SI/PI 风险也会随面板尺寸、warpage、RDL uniformity、overlay、via yield、thermal stress 与 test access 放大。</p>
+          <p><strong>评级依据：</strong>A- 级。供应链意义强，命中中国/大中华头部企业与先进封装产能；但具体技术数据有限，需避免把产线新闻等同成熟量产。</p>
+          <p><strong>可信度/待验证点：</strong>需要量产良率、RDL line/space、panel warpage、die shift、substrate availability、客户产品和封装可靠性数据。</p>
+          <p><strong>对用户有什么用：</strong>看 PLP/fan-out 时不要只问成本下降，要把 warpage、RDL impedance、return path、PDN、thermal 和 test coverage 加入同一张量产风险表。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B+ 级 · Compute-in-Memory / Power Integrity</div>
+          <h3 class="item-title">DRAM-based CIM 的 PDN 论文提醒：存算一体的瓶颈可能在电源瞬态而非 MAC 阵列</h3>
+          <div class="source">2026-04-11 · Semiconductor Engineering / UT Austin arXiv paper · <a href="https://semiengineering.com/pdn-challenges-in-dram-based-compute-in-memory-systems-ut-austin/">source</a></div>
+          <p><strong>事实摘要：</strong>UT Austin 论文综述 DRAM-based compute-/near-memory 的 power delivery challenges，指出 multi-row activation、row-buffer operations、near-bank compute 和 3D-stacked organizations 会引入非传统 current demand pattern，并导致 voltage droop、IR drop 和 thermal hotspot。</p>
+          <p><strong>技术影响：</strong>CIM/PIM 的性能不能只看减少 data movement 或增加 MAC locality。burst vs sustained current、localized vs distributed activation、package inductance、decap placement、controller scheduling、DRAM timing constraint 和 thermal coupling 都会决定真实可用速度。</p>
+          <p><strong>评级依据：</strong>B+ 级。不是当天新闻，但精准命中 compute-in-memory 与 PI，是判断 PIM claim 是否可信的好框架。</p>
+          <p><strong>可信度/待验证点：</strong>需要看 workload 假设、DRAM timing 模型、package/board parasitic、measurement correlation 和真实 silicon 复现。</p>
+          <p><strong>对用户有什么用：</strong>评估 PIM/CIM 项目时，把 architecture speedup、PDN transient、IR drop、thermal hotspot 和 controller scheduling 放在同一张验证表里，避免把营销 benchmark 当成系统结论。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>后续跟踪问题</h2>
+        <ol class="brief-list">
+          <li>CPO 供应链何时能公开 package-level optical/electrical ATE coverage、BER、yield data stitching 和 field RMA 数据？</li>
+          <li>Intel EMIB-T / glass substrate / CPO 路线是否会释放更多 measured SI/PI、thermal、warpage 和 UCIe compliance margin？</li>
+          <li>LPDDR6 SOCAMM2 是否会形成服务器级公开 channel model、mechanical spec、thermal guideline 和 interoperability test？</li>
+          <li>HBM 3D X-ray/CT 能否在 inline throughput、误检率和 electrical FA correlation 上证明成本有效？</li>
+          <li>OSAT 的美国 advanced packaging/test 产能能否拿到具体 AI/HPC customer vehicle 和爬坡数据？</li>
+          <li>ASE panel-level packaging 何时能公开 RDL uniformity、panel warpage、die shift 和客户量产良率数据？</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>关键术语小词典</h2>
+        <ul class="brief-list">
+          <li><strong>Dual-domain CPO ATE：</strong>同时处理 electrical 与 optical 测试数据的测试架构，目标是让 BER、eye、link margin、insertion loss 与 electrical spec 可以在同一颗器件上追溯。</li>
+          <li><strong>Device Interface Board (DIB)：</strong>ATE 与被测器件之间的接口板。CPO 中 DIB 还要处理光连接、fiber alignment、socketing、warpage 和热管理。</li>
+          <li><strong>EMIB-T：</strong>Intel 的 2.5D bridge + TSV 方向，用于扩大 multi-die AI/HPC package，同时改善高带宽逻辑-HBM 互连与供电。</li>
+          <li><strong>SOCAMM2：</strong>面向紧凑、可维护、高带宽低功耗内存模块的形态，重点风险在 connector/channel/thermal/serviceability。</li>
+          <li><strong>PIM/CIM PDN Transient：</strong>存算一体在 memory 内或近 memory 触发并行计算时造成的瞬态电流、压降、IR drop 与热热点。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>对你有什么用</h2>
+        <ul class="brief-list">
+          <li>今天最该保留的判断是：CPO 和 advanced packaging 的量产门槛主要在 test、thermal、PDN、data correlation，而不是单个 bandwidth headline。</li>
+          <li>做 2.5D/3D architecture review 时，把 SI/PI、optical coupling、HBM channel、UCIe margin、warpage、test access 和 FA 闭环放在一张矩阵里。</li>
+          <li>对 LPDDR6/SOCAMM2/PIM，要用系统验证语言看待：channel model、PDN、thermal、programming model 和 server qualification 缺一不可。</li>
+          <li>对 sponsor blog 或厂商叙事，保留工程价值，但不要把“方向可信”误读为“量产已验证”。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>想深入可以搜</h2>
+        <ol class="brief-list">
+          <li>CPO package-level optical electrical ATE DIB fiber alignment yield data</li>
+          <li>Intel Foundry ECTC 2026 EMIB-T HBM4e UCIe 64 Gb/s glass substrate CPO</li>
+          <li>HBM 3D X-ray CT TSV microbump die shift inspection throughput</li>
+          <li>LPDDR6 SOCAMM2 PIM JEDEC data center channel model</li>
+          <li>Amkor ECTC 2026 S-Connect S-SWIFT co-packaged optics Arizona advanced packaging test</li>
+          <li>ASE 310 mm panel-level packaging fan-out RDL warpage</li>
+          <li>DRAM compute-in-memory PDN voltage droop IR drop thermal hotspots</li>
+        </ol>
+      </section>
+
+      <section class="panel sources">
+        <h2>来源与发布日期</h2>
+        <ul class="brief-list">
+          <li>Semiconductor Engineering CPO testing：2026-06-09；<a href="https://semiengineering.com/co-packaged-optics-testing-faces-steep-data-center-ramp/">source</a></li>
+          <li>Intel Foundry / ECTC 2026 packaging：2026-06-05；<a href="https://semiengineering.com/packaging-technologies-redefine-ai-and-hpc-scalability-limits-at-ectc-2026/">source</a></li>
+          <li>HBM 3D X-ray inspection：2026-06-09；<a href="https://semiengineering.com/enhancing-high-bandwidth-memory-hbm-reliability-with-3d-x-ray-inspection/">source</a></li>
+          <li>LPDDR6 roadmap / data center：2026-06-03；<a href="https://www.eetimes.com/lpddr6-roadmap-leads-to-the-data-center/">source</a></li>
+          <li>Amkor ECTC 2026 advanced packaging：2026-06-05；<a href="https://amkor.com/blog/amkor-ectc-2026-advanced-packaging/">source</a></li>
+          <li>ASE panel-level packaging：2026-05-26；<a href="https://www.digitimes.com/news/a20250526PD214/ase-panel-level-packaging-fan-out-packaging.html">source</a></li>
+          <li>DRAM-based compute-in-memory PDN：2026-04-11；<a href="https://semiengineering.com/pdn-challenges-in-dram-based-compute-in-memory-systems-ut-austin/">source</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
