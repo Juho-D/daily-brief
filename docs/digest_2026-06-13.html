@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026-06-13 晨间 Advanced Packaging & SI/PI 简报</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="eyebrow">Daily Brief · 2026-06-13</div>
+        <h1>Advanced Packaging &amp; SI/PI</h1>
+        <div class="meta">CPO / III-V Chiplets / 3D-IC Verification / Die-to-Die I/O / Vertical PDN / Panel Packaging</div>
+      </section>
+
+      <section class="panel headline">
+        <h2>今日重点判断</h2>
+        <ol class="brief-list">
+          <li>过去 24 小时内最值得看的是“方法论”和“路线图”，不是单一芯片发布。TechInsights 把 CPO、HBM4/16-Hi、panel/glass、3D thermal 放进 2026 封装展望；imec 和 Semiconductor Engineering 的新稿则把互连、热、应力、ESD、PDN 与验证闭环推到同一张工程表里。</li>
+          <li>光电共封装正在从 CPO 单点叙事扩展为 photonics + chiplet + advanced packaging 的生态问题。IOWN AI Fund、imec III-V chiplet on RF silicon interposer、Synopsys/3DIO 叙事共同指向：下一代 AI 基础设施要同时解决光链路、die-to-die、供电、热和制造可测性。</li>
+          <li>6 月 8-10 日的 Silicon Box、Lotus、Qnity 更新说明产业链在补“量产地基”：panel-level chiplet 封装融资、垂直供电/热协同模块、organic interposer/RDL/glass substrate 材料。它们方向可信，但供应商 claim 必须用良率、热阻、PDN、warpage、客户 vehicle 和仿测相关性来验证。</li>
+        </ol>
+      </section>
+
+      <h2 class="section-title">母稿条目 <span>事实、影响、可信度</span></h2>
+
+      <section class="panel">
+        <div class="item-card">
+          <div class="item-label">S 级 · Strategic Framework / Advanced Packaging</div>
+          <h3 class="item-title">TechInsights 2026 outlook 把 CPO、HBM4、panel/glass 与 3D thermal 合成封装主线</h3>
+          <div class="source">2026-06-12 · TechInsights · <a href="https://www.techinsights.com/outlook-reports-2026/advanced-packaging-outlook-report">source</a></div>
+          <p><strong>事实摘要：</strong>TechInsights 发布 2026 Advanced Packaging Outlook 页面，列出五条预期：CPO 进入主流、HBM4 与 16-Hi stacks 推高热和良率风险、panel-level packaging 与 glass substrates 获得动量、3D 堆叠让热管理成为核心约束、移动端也可能开始采用 chiplet 式架构。页面还明确提到 TSMC 将 COUPE 集成进 CoWoS 的方向，以及 2026 是 optical engine 在高性能系统中的拐点。</p>
+          <p><strong>技术影响：</strong>这不是单一产品新闻，而是把 advanced packaging 的关键矛盾压缩成一张路线图：CPO 降低数据搬运功耗，HBM4/16-Hi 增加热和堆叠良率压力，glass/panel 试图解决大尺寸封装成本与供给，3D 堆叠要求液冷、TIM、背面供电和热建模一起演进。</p>
+          <p><strong>评级依据：</strong>S 级。头部分析机构给出 2026 scaling framework，覆盖 CPO、HBM、panel/glass、3D thermal 与 chiplet，适合作为今天的战略框架。</p>
+          <p><strong>可信度/待验证点：</strong>方向可信，但页面是报告摘要，很多结论仍需用可验证数据落地：CPO 真实 power saving、HBM4 yield/thermal、panel/glass warpage、COUPE/CoWoS 量产客户、3D thermal resistance 与系统级冷却成本。</p>
+          <p><strong>对用户有什么用：</strong>做封装路线或供应链评估时，不要把 CPO、HBM、glass、thermal 当作孤立主题。建议用“带宽/功耗/良率/热/测试/成本”六列矩阵比较不同封装方案。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">S 级 · CPO / Optical I/O / III-V Chiplets</div>
+          <h3 class="item-title">imec 的 300mm RF silicon interposer 更新把 III-V chiplet、MIMCAP 与 sub-THz passive model 串起来</h3>
+          <div class="source">2026-06-11 · imec · <a href="https://www.imec-int.com/en/press/imec-unlocks-system-level-iii-v-chiplet-integration-si-cmos-advancing-its-300mm-rf-silicon">source</a></div>
+          <p><strong>事实摘要：</strong>imec 宣布推进 300mm RF silicon interposer 平台，新增三项能力：用于提升紧凑度和供电的高密度 MIMCAP，面向 sub-THz 约 300GHz 的 passive component modeling framework，以及面向 III-V chiplet assembly 的 laser-assisted bonding。imec 称其 MIMCAP 相比典型 III-V on-chip capacitors 有 10-100 倍 capacitance density；bonding 展示低于 600nm 对准精度、低于 0.05° 旋转误差，并在 110-170GHz 区间保持小于 -15dB reflection。</p>
+          <p><strong>技术影响：</strong>这条信息对 CPO/optical I/O 很关键，因为它把 III-V 光电/射频器件、Si-CMOS interposer、去耦、passive model 与装配精度放到一个 manufacturable platform 里。未来光引擎、mmWave/sub-THz 与高速数据中心链路的瓶颈不只是器件本身，还包括 interposer passive library、PDN、alignment、thermal budget 和 assembly yield。</p>
+          <p><strong>评级依据：</strong>S 级。imec 给出可验证的工艺与测量指标，并直接覆盖 optical-electrical co-packaging、chiplet integration、PDN/passive modeling 与高频互连。</p>
+          <p><strong>可信度/待验证点：</strong>研发指标可信，但仍需验证低批量制造到量产的良率、bonding throughput、热循环后 RF/optical performance、MIMCAP reliability、PDN transient 与设计库在客户设计中的可迁移性。</p>
+          <p><strong>对用户有什么用：</strong>评估 optical I/O 或 III-V chiplet 路线时，应追问 interposer 是否有可复用 passive model、decap 策略、alignment 数据、热预算和封装后测量闭环，而不是只看单颗 III-V 器件性能。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · SI/PI / 3D-IC Verification</div>
+          <h3 class="item-title">3D-IC verification 新文强调：热、应力、ESD、PDN 与版图验证必须进入同一数字孪生</h3>
+          <div class="source">2026-06-11 · Semiconductor Engineering / Siemens EDA sponsor blog · <a href="https://semiengineering.com/mastering-3d-ic-verification-complexity/">source</a></div>
+          <p><strong>事实摘要：</strong>文章指出 2.5D/3D-IC 从传统单 die 验证变成跨域问题：thermal hotspot 会影响相邻 die，封装应力会改变器件特性，ESD path 会跨越 micro-bump、TSV 与 package interconnect。文中强调 interface DRC、die-to-die antenna check、point-to-point current density、layout-based thermal/stress extraction、bi-directional model exchange 与 integrated multiphysics platform。</p>
+          <p><strong>技术影响：</strong>这与 SI/PI 强相关。多 die 封装中的 return path、TSV/micro-bump 电流密度、IR drop、L·di/dt、热致电阻变化和机械应力会一起影响 timing margin、BER、reliability 与 yield。传统 point-tool flow 容易在模型转换和边界条件上丢失系统意图。</p>
+          <p><strong>评级依据：</strong>A 级。虽然是 sponsor blog，但发布时间新、工程议题强，覆盖 3D-IC 验证、仿测结合、thermal-mechanical-electrical co-analysis。</p>
+          <p><strong>可信度/待验证点：</strong>方法论可信，但工具能力需要用实际 package vehicle 验证：仿真与 thermal camera/TDR/VNA/ATE/SLT 的相关性、模型建立成本、跨供应商数据格式、以及 signoff criterion 是否被 foundry/OSAT/customer 共同接受。</p>
+          <p><strong>对用户有什么用：</strong>做 2.5D/3D 评审时，应把“仿真 deck 是否能回灌测试数据”列为硬要求，并要求供应链说明 thermal、stress、ESD、PDN、SI 的边界条件和测量计划。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · SI/PI & High-Speed I/O / Die-to-Die</div>
+          <h3 class="item-title">3DIO / die-to-die I/O 叙事把 BIST、redundancy、source-synchronous timing 与 TSV-aware PDN 绑定</h3>
+          <div class="source">2026-06-12 · Semiconductor Engineering / Synopsys sponsor blog · <a href="https://semiengineering.com/re-architecting-die-to-die-io-for-ai/">source</a></div>
+          <p><strong>事实摘要：</strong>文章讨论面向 AI 的 die-to-die I/O 重新架构，强调 cluster-based PHY、configurable redundancy、pre/post-bond BIST、repair、source-synchronous SDR/DDR lanes、FIFO elasticity、clock delay monitoring，以及 integrated CDM ESD、VDD/VSS bumps 和 TSV-aware bottom-die constructs。文章还引用 Socionext 两次 3DIC tape-out 的 proof point。</p>
+          <p><strong>技术影响：</strong>die-to-die I/O 的竞争点从单 lane 速率扩展到可制造性和 bring-up predictability。随着垂直互连数量增加，SI margin、timing closure、ESD path、PDN return、pre/post-bond test 和 repair 机制必须共同设计，否则堆叠良率会被不可定位的 inter-die fault 拖累。</p>
+          <p><strong>评级依据：</strong>A 级。主题强相关 UCIe/高密度 die-to-die/3D integration/SI/PI，但来源为厂商 sponsor blog，需避免把 vendor narrative 当行业结论。</p>
+          <p><strong>可信度/待验证点：</strong>需要公开更多 BER、timing margin、BIST coverage、repair yield uplift、ESD/PDN 仿测相关、与 UCIe 或专有 PHY 的互操作边界。</p>
+          <p><strong>对用户有什么用：</strong>评估 die-to-die PHY 时，不要只问速率和 pJ/bit。要问 post-bond 怎么测、坏 lane 怎么 repair、clock/timing 怎么 monitor、VDD/VSS bump 与 TSV return path 怎么布局。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A 级 · Optical AI Infrastructure / Ecosystem</div>
+          <h3 class="item-title">NTT、SK 等拟设约 5 亿美元 IOWN AI Fund，投资 photonics、AI processors、advanced packaging 与 power optimization</h3>
+          <div class="source">2026-06-10 · NTT / SK / Chunghwa Telecom / DBJ · <a href="https://group.ntt/en/newsrelease/2026/06/10/pdf/260610aa.pdf">source</a></div>
+          <p><strong>事实摘要：</strong>NTT、Young Sohn、SK Group、Chunghwa Telecom、DBJ 宣布拟设 IOWN AI Fund，并计划在 Silicon Valley 与 Tokyo 运作。基金目标约 5 亿美元，投资方向包括 photonics technologies、AI processors and advanced packaging、light source and modulators、distributed AI infrastructure management、power efficiency optimization、liquid cooling、software 与 AI inference。文件列出多家表达兴趣的公司，包括 GlobalFoundries、Samsung Electronics、SK hynix、Sony、NEC、Fujitsu 等。</p>
+          <p><strong>技术影响：</strong>这条不是封装工艺发布，但说明光互连、先进封装、AI 推理、功耗和边缘/分布式数据中心被资本和产业联盟打包看待。CPO/optical I/O 的成败将受光器件、封装、供电、冷却、互连标准和系统运营共同制约。</p>
+          <p><strong>评级依据：</strong>A 级。头部通信/半导体/投资方形成生态级投入，直接覆盖 photonics、chiplets、3D packaging、power optimization，但仍处于 fund formation 与生态建设阶段。</p>
+          <p><strong>可信度/待验证点：</strong>文件说明投资实体和参与名单仍有不确定性。后续要看首批投资组合、真实产品验证、CPO/optical networking 标准路线、与 hyperscaler 或 telecom deployment 的落地关系。</p>
+          <p><strong>对用户有什么用：</strong>跟踪 CPO 不应只看交换芯片厂商，还要跟踪运营商、光器件、foundry、EDA、封装、冷却和电源生态是否形成共同验证平台。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">A- 级 · Advanced Packaging Capacity / Panel-Level Chiplets</div>
+          <h3 class="item-title">Silicon Box 融资 SGD 100M，继续扩大 panel-level chiplet packaging；“250M units near-perfect yield”需重点验证</h3>
+          <div class="source">2026-06-08 · Silicon Box · <a href="https://www.silicon-box.com/silicon-box-secures-sgd-100m-financing-to-accelerate-growth-in-advanced-packaging">source</a></div>
+          <p><strong>事实摘要：</strong>Silicon Box 宣布获得 SGD 100M debt financing，并有额外 USD 75M upsize option。公司称其 SiPlet 技术和 panel-level packaging 面向 chiplet integration，并称截至 2026 Q1 其 Singapore manufacturing facility 已出货超过 250M units，接近 perfect yield。融资将用于 capacity expansion 与全球部署。</p>
+          <p><strong>技术影响：</strong>panel-level packaging 若能稳定量产，会改变 chiplet/fan-out/RDL 经济性。但对 SI/PI 来说，panel 尺寸带来的 RDL uniformity、die shift、warpage、substrate flatness、return path、PDN impedance、test access 与 failure analysis 难度会同步上升。</p>
+          <p><strong>评级依据：</strong>A- 级。产业链和产能意义强，且有出货与融资数字；但核心技术和良率数据来自公司自述，缺少第三方验证。</p>
+          <p><strong>可信度/待验证点：</strong>重点验证 near-perfect yield 的定义、产品复杂度、RDL line/space、package size、客户类型、warpage 数据、electrical yield、thermal cycling 与 field return。</p>
+          <p><strong>对用户有什么用：</strong>评估 panel-level chiplet 供应商时，要求其提供按封装复杂度分层的良率、SI/PI coupon、warpage map、ATE/SLT coverage 和 FA 周期，而不是只看融资和出货量。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B+ 级 · Power Integrity / Thermal / Vertical Power Delivery</div>
+          <h3 class="item-title">Lotus vStrata 把垂直供电和热管理封装成 AI accelerator 底部模块，提示 last-inch PDN 正在产品化</h3>
+          <div class="source">2026-06-08 · Lotus Microsystems · <a href="https://www.lotus-microsystems.com/news/vstrata-launch">source</a></div>
+          <p><strong>事实摘要：</strong>Lotus Microsystems 发布 vStrata vertical power delivery platform，称工程样品将在 2026 Q3 出货。其 LSC0580 module 基于 silicon Power Interposer Technology，把供电直接放到 processor 下方，同时在同一点管理热负载。公司声称该平台可减少超过 50% power conversion losses，并在优化配置下降低最高 25°C operating temperature。</p>
+          <p><strong>技术影响：</strong>AI accelerator 的 PI 瓶颈正在从 VRM/board 级供电延伸到 processor last-inch distribution。垂直供电若成立，会影响 package stack-up、BGA/land pattern、thermal path、mechanical keep-out、decap placement、PDN impedance 和系统冷却设计。</p>
+          <p><strong>评级依据：</strong>B+ 级。方向强相关 PI/thermal，但仍是供应商新品与工程样品阶段，关键 claim 尚未被独立复现。</p>
+          <p><strong>可信度/待验证点：</strong>需要验证实际 xPU load transient、效率曲线、热阻、机械可靠性、board/package integration cost、EMI、维修性、以及与主流 accelerator socket 的兼容性。</p>
+          <p><strong>对用户有什么用：</strong>如果做高电流 AI/HPC 板级方案，建议把 vertical power delivery 作为备选架构评估，但必须用 load step、thermal map、PDN impedance 和可靠性测试筛掉营销指标。</p>
+        </div>
+
+        <div class="item-card">
+          <div class="item-label">B 级 · Materials / Organic Interposer / RDL</div>
+          <h3 class="item-title">Qnity 推出 organic interposer 材料，说明 RDL、glass substrate 和材料可靠性会成为封装扩展瓶颈</h3>
+          <div class="source">2026-06-08 · Qnity Electronics · <a href="https://ir.qnityelectronics.com/press-releases/detail/58/qnity-introduces-enhanced-advanced-packaging-materials-for-organic-interposer-applications">source</a></div>
+          <p><strong>事实摘要：</strong>Qnity Electronics 宣布 Intervia 8540HSP multi-role copper 与 Cyclotene DF6800M dry film photo-imageable dielectric，用于 organic interposer applications，支持 advanced interconnect formation、RDL designs 和 emerging glass-based substrate structures。</p>
+          <p><strong>技术影响：</strong>当 advanced packaging 从 silicon interposer 扩展到 organic interposer、glass substrate 和 panel-level processing，材料会决定 RDL 精度、介质损耗、铜可靠性、CTE mismatch、warpage、via yield 和高频通道损耗。材料选择会直接进入 SI/PI 和可靠性模型。</p>
+          <p><strong>评级依据：</strong>B 级。供应链相关但信息偏产品发布，缺少可对比的损耗、可靠性和量产数据。</p>
+          <p><strong>可信度/待验证点：</strong>需要数据表之外的 insertion loss、Dk/Df 频散、CAF、thermal cycling、湿热、RDL adhesion、glass/organic substrate compatibility 和客户量产案例。</p>
+          <p><strong>对用户有什么用：</strong>材料评审不应只交给采购。SI/PI 团队要把 dielectric loss、铜粗糙度、RDL 几何、via reliability 与 thermal-mechanical 参数纳入早期仿真。</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>后续跟踪问题</h2>
+        <ol class="brief-list">
+          <li>TechInsights 所说 CPO mainstream 是否会被真实 hyperscaler deployment、COUPE/CoWoS 客户和 optical engine yield 数据验证？</li>
+          <li>imec RF silicon interposer 平台能否从 IMS/ECTC paper 指标进入低批量制造，并保持 bonding throughput、RF/optical performance 和 MIMCAP reliability？</li>
+          <li>3D-IC verification 的 digital twin 能否和 ATE、SLT、thermal camera、warpage metrology、TDR/VNA 数据闭环，而不是停留在工具叙事？</li>
+          <li>3DIO / die-to-die PHY 的 BIST、repair、redundancy 能带来多少可量化良率提升，是否会与 UCIe 生态兼容？</li>
+          <li>Silicon Box 的 panel-level 出货与“near-perfect yield”是否覆盖高复杂度 AI/HPC chiplet，还是以较低复杂度器件为主？</li>
+          <li>垂直供电模块能否在真实 accelerator socket 中同时通过 transient、thermal、mechanical、EMI 与服务性验证？</li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>关键术语小词典</h2>
+        <ul class="brief-list">
+          <li><strong>COUPE：</strong>TSMC 的 compact universal photonic engine 方向，常被放在 CoWoS/CPO 讨论中，核心是把光引擎与高性能封装更紧密集成。</li>
+          <li><strong>RF silicon interposer：</strong>承载高频传输线、MIMCAP、passives 和 chiplet assembly 的硅中介层，可用于 III-V/Si-CMOS 异构集成。</li>
+          <li><strong>Post-bond BIST：</strong>堆叠或键合完成后执行的 built-in self-test，用来定位 die-to-die link 或垂直互连缺陷。</li>
+          <li><strong>Vertical Power Delivery：</strong>把供电路径从板级/侧向压缩到芯片下方或垂直方向，目标是降低 last-inch IR drop 和 conversion loss，但会引入热和机械耦合。</li>
+          <li><strong>Organic interposer：</strong>用有机材料构建的中介层方案，成本和面积潜力较大，但 RDL 精度、损耗、warpage 和可靠性需要重点验证。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>对你有什么用</h2>
+        <ul class="brief-list">
+          <li>今天最应该保留的判断是：先进封装竞争正在从“谁能堆更多 die”转向“谁能把光、电、热、力、测试、良率和材料数据闭环”。</li>
+          <li>做 CPO/optical I/O 项目时，把 optical loss、alignment、PDN decap、thermal budget、DIB/socket/fiber test 和 yield data stitching 放在同一份 verification plan 里。</li>
+          <li>做 3D-IC 或 die-to-die 架构评审时，要求供应商给出 pre/post-bond test、repair、ESD path、TSV-aware PDN、timing margin 与仿测相关证据。</li>
+          <li>看 panel-level、vertical power、organic interposer 这类供应链新闻时，先记录方向价值，再等待 warpage、loss、thermal、yield、客户 vehicle 等硬数据。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>想深入可以搜</h2>
+        <ol class="brief-list">
+          <li>TechInsights 2026 Advanced Packaging Outlook CPO HBM4 glass panel thermal</li>
+          <li>imec 300mm RF silicon interposer MIMCAP laser assisted bonding III-V chiplet 170GHz</li>
+          <li>3D-IC verification digital twin thermal stress ESD PDN Siemens EDA</li>
+          <li>3DIO die-to-die source synchronous BIST redundancy TSV-aware power delivery</li>
+          <li>IOWN AI Fund photonics advanced packaging power optimization distributed AI infrastructure</li>
+          <li>Silicon Box SiPlet panel-level packaging 250 million units yield</li>
+          <li>vertical power delivery AI accelerator last-inch PDN thermal management</li>
+          <li>organic interposer RDL dry film dielectric glass substrate advanced packaging materials</li>
+        </ol>
+      </section>
+
+      <section class="panel sources">
+        <h2>来源与发布日期</h2>
+        <ul class="brief-list">
+          <li>TechInsights 2026 Advanced Packaging Outlook：2026-06-12，<a href="https://www.techinsights.com/outlook-reports-2026/advanced-packaging-outlook-report">source</a></li>
+          <li>imec 300mm RF silicon interposer / III-V chiplet：2026-06-11，<a href="https://www.imec-int.com/en/press/imec-unlocks-system-level-iii-v-chiplet-integration-si-cmos-advancing-its-300mm-rf-silicon">source</a></li>
+          <li>Semiconductor Engineering 3D-IC verification complexity：2026-06-11，<a href="https://semiengineering.com/mastering-3d-ic-verification-complexity/">source</a></li>
+          <li>Semiconductor Engineering / Synopsys die-to-die I/O：2026-06-12，<a href="https://semiengineering.com/re-architecting-die-to-die-io-for-ai/">source</a></li>
+          <li>NTT / SK / Chunghwa Telecom / DBJ IOWN AI Fund：2026-06-10，<a href="https://group.ntt/en/newsrelease/2026/06/10/pdf/260610aa.pdf">source</a></li>
+          <li>Silicon Box SGD 100M financing：2026-06-08，<a href="https://www.silicon-box.com/silicon-box-secures-sgd-100m-financing-to-accelerate-growth-in-advanced-packaging">source</a></li>
+          <li>Lotus Microsystems vStrata vertical power delivery：2026-06-08，<a href="https://www.lotus-microsystems.com/news/vstrata-launch">source</a></li>
+          <li>Qnity organic interposer materials：2026-06-08，<a href="https://ir.qnityelectronics.com/press-releases/detail/58/qnity-introduces-enhanced-advanced-packaging-materials-for-organic-interposer-applications">source</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
